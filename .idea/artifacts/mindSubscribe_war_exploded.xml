@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="mindSubscribe:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/mindSubscribe_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="mindSubscribe" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="commons-dbcp-1.4.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="commons-email-1.4.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="commons-pool-1.6.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="gson-2.8.2.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="json.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="jstl-1.2.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="jstl-impl.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="mail.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="mysql-connector-java-5.1.18-bin.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="struts2-json-plugin-2.2.1.jar" module-name="mindSubscribe" />
+          <element id="library" level="module" name="xwork-core-2.2.1.jar" module-name="mindSubscribe" />
+          <element id="file-copy" path="$PROJECT_DIR$/../App/apache-tomcat-8.5.76/lib/tomcat-websocket.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="mindSubscribe/web/Web" />
+    </root>
+  </artifact>
+</component>
