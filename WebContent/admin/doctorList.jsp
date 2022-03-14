@@ -230,6 +230,7 @@
      	<option value="下沙校区" id="level1" >下沙校区</option>
      	<option value="文一校区" id="level2">文一校区</option>
      	<option value="青山湖校区" id="level3">青山湖校区</option>
+        <option value="东岳校区" id="level4">东岳校区</option>
      </select>
      </span>
      <div class="prompt r_f" id="levleDiv"></div>
