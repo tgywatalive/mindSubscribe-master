@@ -255,7 +255,7 @@ setInterval(function(){
 						class="iframeurl"><i class="icon-list"></i><span
 							class="menu-text"> 预约信息备注 </span></a></li>
 
-					<li>
+					<%--<li>
 					<a href="#" class="dropdown-toggle"><i
 							class="icon-edit"></i><span class="menu-text"> 消息 </span>
 							<span id="newMessage" style="color:red"></span>
@@ -269,7 +269,7 @@ setInterval(function(){
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listSendMessage&reqeustUser=admin" title="发送消息" class="iframeurl"><i
 									class="icon-double-angle-right"></i>发信箱</a></li>
 						</ul>
-					</li>
+					</li>--%>
 					
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="宣传管理"
