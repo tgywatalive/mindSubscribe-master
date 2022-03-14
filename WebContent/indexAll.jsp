@@ -11,13 +11,13 @@
 
 
 <h2>
-<a href="${pageContext.request.contextPath }/admin/login">管理员登录</a>
+<a href="${pageContext.request.contextPath }/admin/login">系统管理员登录</a>
 </h2>
 
 
 
 <h2>
-<a href="${pageContext.request.contextPath }/doctor/DoctorLoginServlet">校团委登录</a>
+<a href="${pageContext.request.contextPath }/doctor/DoctorLoginServlet">场地管理员登录</a>
 </h2>
 
 
