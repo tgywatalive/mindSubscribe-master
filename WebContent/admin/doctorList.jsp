@@ -76,7 +76,7 @@
       <ul class="search_content clearfix">
       <form action="${pageContext.request.contextPath }/doctor/DoctorServlet?m=listDoctor" method="post">
       
-            <li><label class="l_f">咨询师姓名</label><input name="name" type="text"  class="text_add" placeholder="输入咨询师姓名" value="${search.name }" /></li>
+            <li><label class="l_f">场地管理员姓名</label><input name="name" type="text"  class="text_add" placeholder="输入场地管理员姓名" value="${search.name }" /></li>
             
             <li><label class="l_f">性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input name="sex" type="radio"  class="ace" value="1" ${search.sex eq 1 ? "checked='checked'":"" }/><span class="lbl">男</span>
@@ -97,7 +97,7 @@
      <!---->
      <div class="border clearfix">
        <span class="l_f">
-        <a href="javascript:void()" id="member_add" class="btn btn-warning"><i class="icon-plus"></i>添加咨询师</a>
+        <a href="javascript:void()" id="member_add" class="btn btn-warning"><i class="icon-plus"></i>添加场地管理员</a>
         <a href="javascript:void()" id="deleteList"class="btn btn-danger"><i class="icon-trash"></i>批量删除</a>
        </span>
        <span class="r_f">共：<b>${listSize }</b>条</span>
@@ -109,14 +109,14 @@
 		 <tr>
 				<th width="25"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
 				<th width="100">登录账号</th>
-				<th width="100">个人照片</th>
+				<th width="100">场所照片</th>
 				<th width="100">姓名</th>
 				<th width="80">性别</th>
 				<th width="80">年龄</th>
 				<th width="120">手机</th>
 				<th width="150">邮箱</th>
-				<th width="">一般咨询地点</th>
-                <th width="100">等级</th>
+				<th width="">管理文娱场所地点</th>
+                <th width="100">校区</th>
 				<th width="70">状态</th>                
 				<th width="250">操作</th>
 			</tr>
@@ -227,9 +227,9 @@
      <span class="add_name">
      <select name="level">
      	<option value="暂无" id="level0">暂无</option>
-     	<option value="一级咨询师" id="level1" >一级咨询师</option>
-     	<option value="二级级咨询师" id="level2">二级咨询师</option>
-     	<option value="三级咨询师" id="level3">三级咨询师</option>
+     	<option value="下沙校区" id="level1" >下沙校区</option>
+     	<option value="文一校区" id="level2">文一校区</option>
+     	<option value="青山湖校区" id="level3">青山湖校区</option>
      </select>
      </span>
      <div class="prompt r_f" id="levleDiv"></div>
@@ -238,7 +238,7 @@
      
      <li ><label class="label_name">咨询地址：</label><span class="add_name"><input name="place" id="place" type="text"  class="text_add"  /></span> <div class="prompt r_f"></div> </li>
      
-     <li ><label class="label_name">擅长方向</label><span class="add_name"><input name="skill" id="skill" type="text"  class="text_add" /></span> <div class="prompt r_f"></div> </li>
+     <li ><label class="label_name">适用活动</label><span class="add_name"><input name="skill" id="skill" type="text"  class="text_add" /></span> <div class="prompt r_f"></div> </li>
      
      <!-- 图片 -->
      <li >
@@ -473,7 +473,7 @@ function member_show(id){
 	//显示查看界面
 	  layer.open({
       type: 1,
-      title: '查看咨询师信息',
+      title: '查看场地管理员信息',
 		maxmin: true, 
 		shadeClose:false, //点击遮罩关闭层
       area : ['800px' , ''],
