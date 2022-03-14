@@ -99,8 +99,8 @@ public class DoctorBaseServlet extends HttpServlet {
 
 			request.setAttribute("announcmentList", announcmentList);
 
-			// 转发到首页(来访者和咨询师共用一个首页)
-			request.getRequestDispatcher("/client/home.jsp").forward(request, response);
+			// 转发到首页(来访者和咨询师共用一个首页) 这里已改
+			request.getRequestDispatcher("/doctor/home.jsp").forward(request, response);
 
 		} else if ("doctorInfo".equals(m)) {
 

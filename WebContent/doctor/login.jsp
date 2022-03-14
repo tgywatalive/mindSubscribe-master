@@ -33,7 +33,7 @@
 	<div class="center">
 	<h1>
 									<i class="icon-leaf green"></i>
-									<span class="orange">心理咨询预约</span>
+									<span class="orange">文娱场所预约预约</span>
 									<span class="white">系统</span>
 								</h1>
 								<h4 class="white">欢迎</h4>
@@ -47,7 +47,7 @@
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
 												<i class="icon-coffee green"></i>
-												咨询师登录
+												场所管理员登录
 											</h4>
 
 											<%-- <div class="login_icon"><img src="${pageContext.request.contextPath }/mutualResource/images/login.png" /></div> --%>
@@ -88,7 +88,7 @@
 											</div>
 
 											<div class="social-login center">
-											支持通过电话号码登录 
+											可以通过电话号码登录
 											</div>
 										</div><!-- /widget-main -->
 

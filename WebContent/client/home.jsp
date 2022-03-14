@@ -35,8 +35,45 @@
 <div class="page-content clearfix">
  <div class="alert alert-block alert-success">
   <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
-  <i class="icon-ok green"></i>欢迎使用<strong class="green">心理咨询预约系统</strong>	
+  <i class="icon-ok green"></i>欢迎使用<strong class="green">文娱场所预约系统</strong>
  </div>
+	<div class="state-overview clearfix">
+		<%--<div class="col-lg-3 col-sm-6">
+			<section class="panel">
+				<div class="symbol terques">
+					<i class="icon-user"></i>
+				</div>
+				<div class="value">
+					<h1>${doctorNum }</h1>
+					<p>场地管理员</p>
+				</div>
+
+			</section>
+		</div>--%>
+		<div class="col-lg-3 col-sm-6">
+			<section class="panel">
+				<div class="symbol red">
+					<i class="icon-user"></i>
+				</div>
+				<div class="value">
+					<h1>${clientNum }</h1>
+					<p>学生用户</p>
+				</div>
+			</section>
+		</div>
+		<div class="col-lg-3 col-sm-6">
+			<section class="panel">
+				<div class="symbol yellow">
+					<i class="icon-bar-chart"></i>
+				</div>
+				<div class="value">
+					<h1>${clientArchive }</h1>
+					<p>预约</p>
+				</div>
+			</section>
+		</div>
+
+	</div>
              <!-- <div class="t_Record">
                <div id="main" style="height:300px; overflow:hidden; width:100%; overflow:auto" ></div>     
               </div> --> 
@@ -74,12 +111,12 @@
          </div>  
          
          <div class="news_style">
-          <div class="title_name">最新留言</div>
+          <div class="title_name">最新报修</div>
           <ul class="list">
           
           	<c:forEach items="${newMessageBoardList }" var="messageBoard">
           	
-          		<li><i class="icon-bell red"></i><a title="留言管理" href="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard">
+          		<li><i class="icon-bell red"></i><a title="报修管理" href="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard">
           	 	
           	 	${messageBoard.context }&nbsp;&nbsp;
           	 	${messageBoard.client.name }
