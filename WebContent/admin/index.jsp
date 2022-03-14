@@ -243,17 +243,17 @@ setInterval(function(){
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
 							class="menu-text"> 系统首页 </span></a></li>
 							
-					<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/doctor/DoctorServlet?m=listDoctor" title="咨询师管理" 
+					<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/doctor/DoctorServlet?m=listDoctor" title="场地管理员管理"
 						class="iframeurl"><i class="icon-user"></i><span
-							class="menu-text"> 咨询师管理 </span></a></li>
+							class="menu-text"> 场地管理员管理 </span></a></li>
 							
-					<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientServlet?m=listClient"  title="来访者管理" 
+					<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientServlet?m=listClient"  title="学生用户管理"
 						class="iframeurl"><i class="icon-user"></i><span
-							class="menu-text"> 来访者管理 </span></a></li>
+							class="menu-text"> 学生用户管理 </span></a></li>
 							
-					<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/question/QuestionServlet?m=listQuestion" title="问卷管理" 
+					<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/question/QuestionServlet?m=listQuestion" title="预约信息备注"
 						class="iframeurl"><i class="icon-list"></i><span
-							class="menu-text"> 问卷管理 </span></a></li>
+							class="menu-text"> 预约信息备注 </span></a></li>
 
 					<li>
 					<a href="#" class="dropdown-toggle"><i
@@ -272,14 +272,14 @@ setInterval(function(){
 					</li>
 					
 						
-						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="公告管理" 
+						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="宣传管理"
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 公告管理 </span></a></li>
+							class="menu-text"> 宣传管理 </span></a></li>
 						
 						
-						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="留言管理" 
+						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修管理"
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 留言管理 </span></a></li>
+							class="menu-text"> 报修管理 </span></a></li>
 						
 						
 
@@ -363,7 +363,7 @@ setInterval(function(){
          <!--底部样式-->
        
          <div class="footer_style" id="footerstyle">  
-          <p class="l_f">心理咨询预约管理后台系统</p>
+          <p class="l_f">高校文娱场所管理信息系统</p>
          </div>
 		
 </body>
