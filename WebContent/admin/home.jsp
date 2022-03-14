@@ -45,7 +45,7 @@
                           </div>
                           <div class="value">
                               <h1>${doctorNum }</h1>
-                              <p>咨询师</p>
+                              <p>场地管理员</p>
                           </div>
                           
                       </section>
@@ -57,7 +57,7 @@
                           </div>
                           <div class="value">
                               <h1>${clientNum }</h1>
-                              <p>来访者</p>
+                              <p>学生用户</p>
                           </div>
                       </section>
                   </div>
@@ -68,7 +68,7 @@
                           </div>
                           <div class="value">
                               <h1>${clientArchive }</h1>
-                              <p>咨询</p>
+                              <p>预约</p>
                           </div>
                       </section>
                   </div>
@@ -112,12 +112,12 @@
          </div> 
          
           <div class="news_style">
-          <div class="title_name">最新留言</div>
+          <div class="title_name">最新报修</div>
           <ul class="list">
           
           	<c:forEach items="${newMessageBoardList }" var="messageBoard">
           	
-          		<li><i class="icon-bell red"></i><a title="留言管理" href="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard">
+          		<li><i class="icon-bell red"></i><a title="报修管理" href="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard">
           	 	
           	 	${messageBoard.context }&nbsp;&nbsp;
           	 	${messageBoard.client.name }
