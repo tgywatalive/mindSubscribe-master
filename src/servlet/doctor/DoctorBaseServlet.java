@@ -14,10 +14,7 @@ import bean.Client;
 import bean.Doctor;
 import bean.Message;
 import bean.MessageBoard;
-import model.service.AnnouncmentService;
-import model.service.DoctorService;
-import model.service.MessageBoardService;
-import model.service.MessageService;
+import model.service.*;
 import servlet.client.ClientLoginServlet;
 
 /**
@@ -35,6 +32,10 @@ public class DoctorBaseServlet extends HttpServlet {
 	MessageService messageService = new MessageService();
 
 	AnnouncmentService announcmentService = new AnnouncmentService();
+
+	ClientService clientService = new ClientService(); // 新建代码
+
+	ClientArchiveService clientArchiveService = new ClientArchiveService(); // 新建代码
 
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
@@ -83,6 +84,16 @@ public class DoctorBaseServlet extends HttpServlet {
 		} else if ("doctorIndex".equals(m)) {
 
 			// 查数据（首页用到的）
+
+			//查询共有多少注册来访者
+			int clientNum = clientService.getClientNum();
+
+			request.setAttribute("clientNum", clientNum);
+
+			//查询共有多少咨询记录
+			int clientArchive = clientArchiveService.getClientArchiveNum();
+
+			request.setAttribute("clientArchive", clientArchive);
 
 			// 查询所有显示的留言(最新的十条）
 			ArrayList<MessageBoard> newMessageBoardList = messageBoardService.getMessageBoardNum(10);

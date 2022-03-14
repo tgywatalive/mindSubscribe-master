@@ -2,6 +2,7 @@ package servlet.doctor;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
+import bean.Announcement;
+import bean.Message;
+import bean.MessageBoard;
 import org.apache.struts2.json.JSONException;
 import org.apache.struts2.json.JSONUtil;
 
@@ -34,6 +38,7 @@ public class DoctorServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	DoctorService doctorService = new DoctorService();
+
 	
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
@@ -181,7 +186,7 @@ public class DoctorServlet extends HttpServlet {
 				//修改
 				i = doctorService.updateDoctor(doctor);
 				
-			}else {
+			} else {
 				//增加
 				i = doctorService.addDoctor(doctor);
 			}
