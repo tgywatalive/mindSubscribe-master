@@ -87,7 +87,7 @@
 								value="${search.creater }" /></li>
 
 							<li><label class="l_f">内容</label><input name="context"
-								type="text" class="text_add" placeholder="留言内容"
+								type="text" class="text_add" placeholder="报修内容"
 								value="${search.context }" /></li>
 							<li><label class="l_f">创建时间：从</label><input
 								style="width: 120px;" id="startTime" name="startTime"
@@ -109,11 +109,11 @@
 				</div>
 				
 				<!---->
-				<c:if test="${not empty LOGIN_CLIENT }">
+				<c:if test="${not empty LOGIN_DOCTOR }">
 				<div class="border clearfix">
-					<span class="l_f"> <a href="javascript:void()"
-						id="member_add" class="btn btn-warning"><i class="icon-plus"></i>留言</a>
-					</span> <span class="r_f">共：<b>${listSize }</b>条
+					<%--<span class="l_f"> <a href="javascript:void()"
+						id="member_add" class="btn btn-warning"><i class="icon-plus"></i>报修</a>
+					</span>--%> <span class="r_f">共：<b>${listSize }</b>条
 					</span>
 				</div>
 				
@@ -174,7 +174,7 @@
 		<form id="messageBoardForm">
 			<ul class=" page-content">
 
-				<li><label class="label_name">留言内容:</label> <textarea
+				<li><label class="label_name">报修内容:</label> <textarea
 						name="context" id="context" class="textarea"
 						onKeyUp="textarealength(this,1000)" cols="100" rows="10"></textarea>
 					<p class="textarea-numberbar">

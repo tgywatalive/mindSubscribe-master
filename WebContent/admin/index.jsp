@@ -277,9 +277,9 @@ setInterval(function(){
 							class="menu-text"> 宣传管理 </span></a></li>
 						
 						
-						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修管理"
+						<%--<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修管理"
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 报修管理 </span></a></li>
+							class="menu-text"> 报修管理 </span></a></li>--%>
 						
 						
 

@@ -224,7 +224,7 @@ setInterval(function(){
 					</script>
 					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
                      <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-						咨询师  
+						场地管理员
 						</div>
 						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
 							<span class="btn btn-success"></span>
@@ -244,21 +244,21 @@ setInterval(function(){
 
 				<li>
 					<a href="" class="dropdown-toggle"><i
-							class="icon-edit"></i><span class="menu-text"> 咨询工作 </span><b
+							class="icon-edit"></i><span class="menu-text"> 预约工作 </span><b
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/doctor/DoctorSubServlet?m=subClientList" title="咨询申请" class="iframeurl"><i
-									class="icon-double-angle-right"></i>咨询申请</a></li>
+									class="icon-double-angle-right"></i>预约申请</a></li>
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/doctor/DoctorSubServlet?m=subOnList" title="咨询中" class="iframeurl"><i
-									class="icon-double-angle-right"></i>咨询中</a></li>
+									class="icon-double-angle-right"></i>预约中</a></li>
 						</ul>
 					</li>
 					
 					<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/doctor/DoctorSubServlet?m=doctorConsult"
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
-							class="menu-text"> 咨询记录 </span></a></li>
+							class="menu-text"> 预约记录 </span></a></li>
 
 					<li>
 					<a href="#" class="dropdown-toggle"><i
@@ -280,7 +280,7 @@ setInterval(function(){
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="留言" 
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 留言 </span></a></li>
+							class="menu-text"> 报修 </span></a></li>
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="公告" 
 						class="iframeurl"><i class="icon-edit"></i><span
@@ -367,7 +367,7 @@ setInterval(function(){
          <!--底部样式-->
        
          <div class="footer_style" id="footerstyle">  
-          <p class="l_f">版权所有：XXXX</p>
+          <p class="l_f">版权所有：脱庚雨</p>
          </div>
 		
 </body>
