@@ -36,7 +36,7 @@
 
     <!--咨询师信息-->
     <div class="product_style">
-    <div class="title_name">咨询师</div>
+    <div class="title_name">文娱场所</div>
     <div class="Info_style clearfix">
     
     <c:forEach items="${doctorList }" var="doctor">
@@ -56,17 +56,18 @@
       <span>
      
       <b>${doctor.name }</b>
-      <p>性别：${doctor.sex eq 1 ? "男":"女" }</p>
-      <p>年龄：${doctor.age }</p>
-      <p>等级:${doctor.level }</p>
-      <p>擅长方向：${doctor.skill }</p>
-      <p> 一般咨询地点： ${doctor.place } </p>
+<%--      <p>性别：${doctor.sex eq 1 ? "男":"女" }</p>--%>
+<%--      <p>年龄：${doctor.age }</p>--%>
+      <p>校区:${doctor.level }</p>
+      <p>适用活动：${doctor.skill }</p>
+      <p> 管理员名字： ${doctor.place } </p>
       <p>电话：${doctor.phone }</p>
       <p>电子邮件：${doctor.email }</p>
       <a href="${pageContext.request.contextPath }/client/ClientSubServlet?m=subStep1&doctorId=${doctor.doctorId}" id="member_add" class="btn btn-warning">我要预约</a>
-      <a style="text-decoration:none" onClick="sendMessage(this,'${doctor.doctorId}','${doctor.name}','doctor')"
+          <a href="${pageContext.request.contextPath }/client/ClientSubServlet?m=subStep3&doctorId=${doctor.doctorId}" id="member_add" class="btn btn-warning">他人预约查询</a>
+      <%--<a style="text-decoration:none" onClick="sendMessage(this,'${doctor.doctorId}','${doctor.name}','doctor')"
 											href="javascript:;" title="预约"
-											class="btn btn-xs btn-success">发送消息</a>
+											class="btn btn-xs btn-success">他人预约查询</a>--%>
       </span>
     </div>
     

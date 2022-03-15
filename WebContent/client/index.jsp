@@ -276,9 +276,9 @@ setInterval(function(){
 					
 						
 						
-						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="留言" 
+						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修"
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 留言 </span></a></li>
+							class="menu-text"> 报修 </span></a></li>
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="公告" 
 						class="iframeurl"><i class="icon-edit"></i><span

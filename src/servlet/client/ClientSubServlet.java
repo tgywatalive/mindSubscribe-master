@@ -1,10 +1,7 @@
 package servlet.client;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +17,8 @@ import bean.Question;
 import model.service.ClientArchiveService;
 import model.service.DoctorService;
 import model.service.QuestionService;
+import servlet.MessageServlet;
+import servlet.doctor.DoctorLoginServlet;
 
 /**
  * Servlet implementation class ClientSubServlet 普通来访者的预约咨询业务
@@ -38,6 +37,8 @@ public class ClientSubServlet extends HttpServlet {
 	
 	QuestionService questionService = new QuestionService();
 
+	public String doctorIdTest = "";
+
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
 	 *      response)
@@ -49,6 +50,9 @@ public class ClientSubServlet extends HttpServlet {
 
 		// 当前登录用户
 		Client clientNow = (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
+
+		/*// 管理员权限输入
+		Doctor doctorNow = (Doctor) request.getSession().getAttribute(DoctorLoginServlet.LOGIN_DOCTOR);*/
 
 		
 		if ("subDoctorList".equals(m)) {//可预约咨询师
@@ -106,6 +110,8 @@ public class ClientSubServlet extends HttpServlet {
 			String expectPlace = request.getParameter("expectPlace");
 			
 			String doctorId = request.getParameter("doctorId");
+
+//			doctorIdTest = doctorId;
 			
 			String clientDescription = request.getParameter("clientDescription");
 			
@@ -131,7 +137,19 @@ public class ClientSubServlet extends HttpServlet {
 			clientArchiveService.addClientArchive(clientArchive,response);
 			
 
-		} else if ("clientConsult".equals(m)) {//我的咨询
+		} else if ("subStep3".equals(m)) {
+			//得到当前登录的用户
+			String doctorId = request.getParameter("doctorId");
+
+			List<ClientArchive> list = clientArchiveService.subOnList(Integer.parseInt(doctorId));
+
+			request.setAttribute("clientArchiveList", list);
+
+
+			request.getRequestDispatcher("/client/subOnList.jsp").forward(request, response);
+
+		}
+		else if ("clientConsult".equals(m)) {//我的咨询
 
 			// 已经完成的预约列表
 

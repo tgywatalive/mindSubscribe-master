@@ -38,7 +38,7 @@
       
       
       
-        <div class="form-group"><label class="col-sm-3 control-label no-padding-right" for="form-field-1">用户名： </label>
+        <div class="form-group"><label class="col-sm-3 control-label no-padding-right" for="form-field-1">地点名： </label>
           <div class="col-sm-9"><input type="text" name="name" id="website-title" value="${LOGIN_DOCTOR.name }" class="col-xs-7 text_info" disabled="disabled">
           &nbsp;&nbsp;&nbsp;<a href="javascript:ovid()" onclick="change_Password()" class="btn btn-warning btn-xs">修改密码</a></div>
           
@@ -54,17 +54,17 @@
           
           
         
-          <div class="form-group"><label class="col-sm-3 control-label no-padding-right" for="form-field-1">等级： </label>
+          <div class="form-group"><label class="col-sm-3 control-label no-padding-right" for="form-field-1">校区： </label>
           <div class="col-sm-9"><input type="text" name="level" id="website-title" value="${LOGIN_DOCTOR.level }" class="col-xs-7 text_info" disabled="disabled"></div>
           </div>
           
           
-          <div class="form-group"><label class="col-sm-3 control-label no-padding-right" for="form-field-1">擅长方向： </label>
+          <div class="form-group"><label class="col-sm-3 control-label no-padding-right" for="form-field-1">适用活动： </label>
           <div class="col-sm-9"><input type="text" name="skill" id="website-title" value="${LOGIN_DOCTOR.skill }" class="col-xs-7 text_info" disabled="disabled"></div>
           </div>
           
           
-          <div class="form-group"><label class="col-sm-3 control-label no-padding-right" for="form-field-1">一般咨询地点： </label>
+          <div class="form-group"><label class="col-sm-3 control-label no-padding-right" for="form-field-1">场地管理员名： </label>
           <div class="col-sm-9"><input type="text" name="place" id="website-title" value="${LOGIN_DOCTOR.place }" class="col-xs-7 text_info" disabled="disabled"></div>
           </div>
           

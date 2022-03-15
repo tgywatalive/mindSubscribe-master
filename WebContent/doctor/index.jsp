@@ -248,10 +248,10 @@ setInterval(function(){
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
-								name="${pageContext.request.contextPath }/doctor/DoctorSubServlet?m=subClientList" title="咨询申请" class="iframeurl"><i
+								name="${pageContext.request.contextPath }/doctor/DoctorSubServlet?m=subClientList" title="预约申请" class="iframeurl"><i
 									class="icon-double-angle-right"></i>预约申请</a></li>
 							<li class="home"><a href="javascript:void(0)"
-								name="${pageContext.request.contextPath }/doctor/DoctorSubServlet?m=subOnList" title="咨询中" class="iframeurl"><i
+								name="${pageContext.request.contextPath }/doctor/DoctorSubServlet?m=subOnList" title="预约中" class="iframeurl"><i
 									class="icon-double-angle-right"></i>预约中</a></li>
 						</ul>
 					</li>

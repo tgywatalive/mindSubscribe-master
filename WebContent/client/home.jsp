@@ -37,8 +37,8 @@
   <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
   <i class="icon-ok green"></i>欢迎使用<strong class="green">文娱场所预约系统</strong>
  </div>
-	<div class="state-overview clearfix">
-		<%--<div class="col-lg-3 col-sm-6">
+	<%--<div class="state-overview clearfix">
+		&lt;%&ndash;<div class="col-lg-3 col-sm-6">
 			<section class="panel">
 				<div class="symbol terques">
 					<i class="icon-user"></i>
@@ -49,7 +49,7 @@
 				</div>
 
 			</section>
-		</div>--%>
+		</div>&ndash;%&gt;
 		<div class="col-lg-3 col-sm-6">
 			<section class="panel">
 				<div class="symbol red">
@@ -73,7 +73,7 @@
 			</section>
 		</div>
 
-	</div>
+	</div>--%>
              <!-- <div class="t_Record">
                <div id="main" style="height:300px; overflow:hidden; width:100%; overflow:auto" ></div>     
               </div> --> 

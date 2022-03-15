@@ -112,7 +112,7 @@
 				<c:if test="${not empty LOGIN_CLIENT }">
 				<div class="border clearfix">
 					<span class="l_f"> <a href="javascript:void()"
-						id="member_add" class="btn btn-warning"><i class="icon-plus"></i>留言</a>
+						id="member_add" class="btn btn-warning"><i class="icon-plus"></i>报修</a>
 					</span> <span class="r_f">共：<b>${listSize }</b>条
 					</span>
 				</div>
@@ -129,7 +129,7 @@
 						<thead>
 							<tr>
 								<th width=>报修创建者</th>
-								<th>内容</th>
+								<th>报修内容</th>
 								<th width=>创建时间</th>
 							</tr>
 						</thead>
