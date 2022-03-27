@@ -71,7 +71,7 @@ public class MessageBoardServlet extends HttpServlet {
 
 				request.getRequestDispatcher("/doctor/messageBoard.jsp").forward(request, response);
 
-			} else {//普通来访者和咨询师
+			} else {//普通来访者
 				
 				request.getRequestDispatcher("/client/messageBoard.jsp").forward(request, response);
 			}
