@@ -82,11 +82,11 @@
        <table class="table table-striped table-bordered table-hover" id="sample-table">
 		<thead>
 		 <tr>
- 				<th >咨询者</th>
-				<th>咨询开始时间</th>
-				<th>咨询结束时间</th>
-				<th>咨询地点</th>
-				<th >咨询文档</th> 
+ 				<th >预约者</th>
+				<th>预约开始开始时间</th>
+				<th>预约结束时间</th>
+				<th>预约地点</th>
+				<th >成果文档</th>
 				<th>回访评价</th>      
 			</tr>
 		</thead>

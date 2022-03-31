@@ -82,11 +82,11 @@
        <table class="table table-striped table-bordered table-hover" id="sample-table">
 		<thead>
 		 <tr>
- 				<th >咨询者</th>
-				<th>咨询开始时间</th>
-				<th>咨询结束时间</th>
-				<th>咨询地点</th>
-				<th >咨询文档</th> 
+ 				<th >预约者</th>
+				<th>预约开始时间</th>
+				<th>预约结束时间</th>
+				<th>预约地点</th>
+				<th >成果文档</th>
 				<th >操作</th>
 			</tr>
 		</thead>
@@ -118,9 +118,9 @@
            </td>
           
           <td class="td-manage">
-          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="sendMessage(this,'${clientArchive.client.clientId}','${clientArchive.client.name}','client')">联系咨询者</a>
+          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="sendMessage(this,'${clientArchive.client.clientId}','${clientArchive.client.name}','client')">联系申请者</a>
           <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="uploadSubDoc(${clientArchive.archivesId})">上传文档</a>
-          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="finshSub(this,'${clientArchive.archivesId}','${clientArchive.client.clientId}')">完成咨询</a>
+          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="finshSub(this,'${clientArchive.archivesId}','${clientArchive.client.clientId}')">完成预约</a>
           </td>
           
 		</tr>
@@ -131,7 +131,7 @@
          
       </tbody>
 	</table>
-	<b>完成咨询后请点击"完成"，结束本次咨询，咨询文档可多次上传（之前的将被覆盖）</b><br/>
+	<b>完成预约后请点击"完成"，结束本次预约，成果文档可多次上传（之前的将被覆盖）</b><br/>
 	<b>允许上传文件的类型为：txt,doc,docx,ppt,pptx,xls,xlsx,rar,zip（最大50MB）</b>
    </div>
   </div>

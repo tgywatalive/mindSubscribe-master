@@ -88,7 +88,7 @@
 											</div>
 
 											<div class="social-login center">
-											可以通过电话号码登录
+											请通过电话号码登录
 											</div>
 										</div><!-- /widget-main -->
 

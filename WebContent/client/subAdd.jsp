@@ -70,14 +70,14 @@
    <div class="type_title">预约</div>
 	<form action="" method="post" class="form form-horizontal" id="form-article-add">
 		<div class="clearfix cl">
-         <label class="form-label col-2">咨询时间：</label>
-		 <div class="formControls col-10"><input type="text" class="input-text" value="" placeholder="您期望的咨询时间，如：2019年10月20日-2019年10月22日的下午...等等" id="expectTime" name="expectTime"></div>
+         <label class="form-label col-2">预约时间：</label>
+		 <div class="formControls col-10"><input type="text" class="input-text" value="" placeholder="您期望的预约时间，如：2019年10月20日-2019年10月22日的下午...等等" id="expectTime" name="expectTime"></div>
 		<div class="formControls col-10"></div>
 		</div>
 		
 		<div class=" clearfix cl">
-         <label class="form-label col-2">咨询地点：</label>
-	     <div class="formControls col-10"><input type="text" class="input-text" value="" placeholder="您期望的咨询地点,用，隔开" id="expectPlace" name="expectPlace"></div>
+         <label class="form-label col-2">预约地点：</label>
+	     <div class="formControls col-10"><input type="text" class="input-text" value="" placeholder="您期望的预约地点,用，隔开" id="expectPlace" name="expectPlace"></div>
 		 <div class="formControls col-10"></div>
 		</div>
 		<div class=" clearfix cl">
@@ -85,9 +85,9 @@
 		</div>
 		
 		<div class="clearfix cl">
-			<label class="form-label col-2">主观描述</label>
+			<label class="form-label col-2">设备申请</label>
 			<div class="formControls col-10">
-				<textarea id="context" name="clientDescription" cols="" rows="" class="textarea"  placeholder="说点什么...对您自身目前状况的描述，如：我现在感觉如何？遇到的问题是什么？" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,300)"></textarea>
+				<textarea id="context" name="clientDescription" cols="" rows="" class="textarea"  placeholder="同学需要哪些设备呢？请在此处填写！" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,300)"></textarea>
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/300</p>
 
 			</div>

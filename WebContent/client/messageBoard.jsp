@@ -129,7 +129,7 @@
 						<thead>
 							<tr>
 								<th width=>报修创建者</th>
-								<th>报修内容</th>
+								<th>报修地点以及内容</th>
 								<th width=>创建时间</th>
 							</tr>
 						</thead>

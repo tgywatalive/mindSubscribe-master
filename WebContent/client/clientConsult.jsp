@@ -110,7 +110,7 @@
 
           </c:if>
           <c:if test="${empty clientArchive.docPath }">
-          未上传，请联系咨询师！
+          未上传，请联系场地管理员！
           </c:if>
           </td>
           
@@ -119,7 +119,7 @@
           </td>
           
           <td class="td-manage">
-          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="sendMessage(this,'${clientArchive.doctor.doctorId}','${clientArchive.doctor.name}','doctor')">联系咨询师</a>
+          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="sendMessage(this,'${clientArchive.doctor.doctorId}','${clientArchive.doctor.name}','doctor')">联系场地管理员</a>
           <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="evaluateSub(${clientArchive.archivesId})">评价一下</a>
           </td>
           

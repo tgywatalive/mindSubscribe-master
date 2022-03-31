@@ -112,7 +112,7 @@
           </td>
           
           <td class="td-manage">
-          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="sendMessage(this,'${clientArchive.doctor.doctorId}','${clientArchive.doctor.name}','doctor')">联系咨询师</a>
+          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="sendMessage(this,'${clientArchive.doctor.doctorId}','${clientArchive.doctor.name}','doctor')">联系场地管理员</a>
           
           <c:if test="${clientArchive.status > -1 }">
                <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="cancelSub(${clientArchive.archivesId})">取消预约</a>
@@ -130,7 +130,7 @@
          
       </tbody>
 	</table>
-	<b>想要取消,请联系咨询师</b>
+	<b>想要取消,请联系场地管理员</b>
    </div>
   </div>
  </div>

@@ -30,8 +30,8 @@
 			<div class="w3l_form">
 				<div class="left_grid_info">
 					<h3>欢迎注册 !</h3>
-					<h4>心理咨询预约平台</h4>
-					<p> 
+					<h4>文娱场所预约平台</h4>
+					<%--<p>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						如果您需要心理咨询师帮助自己，在这里我们可以为您提供咨询预约的途径。
 					</p>
@@ -46,7 +46,7 @@
 					<p> 
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						注册成功后，请尽快完善您的个人信息。
-					</p>
+					</p>--%>
 				</div>
 			</div>
 			<div class="w3_info">

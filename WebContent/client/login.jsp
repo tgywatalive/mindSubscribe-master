@@ -33,7 +33,7 @@
 	<div class="center">
 	<h1>
 									<i class="icon-leaf green"></i>
-									<span class="orange">心理咨询预约</span>
+									<span class="orange">文娱场所管理信息系统</span>
 									<span class="orange">系统</span>
 								</h1>
 								<h4 class="orange">为你来</h4>
@@ -97,7 +97,7 @@
 											</div>
 
 											<div class="social-login center">
-											支持通过电话号码登录 
+											请通过电话号码登录
 											</div>
 										</div><!-- /widget-main -->
 

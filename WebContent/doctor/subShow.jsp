@@ -61,13 +61,13 @@
          <div class="formControls col-10"><b>期望地点：</b>${clientArchive.expectPlace}</div>
 		</div>
 		<div class=" clearfix cl">
-		<div class="formControls col-10"><span style="color:green">下面是申请者所做的问卷</span></div>
+<%--		<div class="formControls col-10"><span style="color:green">下面是申请者所做的问卷</span></div>--%>
 		</div>
 		
 		<div class="clearfix cl"></div>
 		
 		<div class="clearfix cl">
-			<label class="formControls col-10"><b>主观描述:</b></label>
+			<label class="formControls col-10"><b>设备申请:</b></label>
 			<div style="margin: 40px;">
 			<p>${clientArchive.clientDescription}
 			</div>
@@ -75,7 +75,7 @@
 		</div>
 		<div class="clearfix cl"><label class="formControls col-10">&nbsp;</div>
 		
-		<div class="clearfix cl"><label class="form-label col-2"><b>题目：</b></label></div>
+<%--		<div class="clearfix cl"><label class="form-label col-2"><b>题目：</b></label></div>--%>
 
 		<div class="clearfix cl" id="question">
 			<div class="Button_operation">

@@ -176,7 +176,7 @@ setInterval(function(){
 			<div class="navbar-header pull-left">
 					
 						<small>					
-						<img src="${pageContext.request.contextPath }/mutualResource/myImg/clientTop.png" height="65px">
+<%--						<img src="${pageContext.request.contextPath }/mutualResource/myImg/clientTop.png" height="65px">--%>
 						</small>
 					
 				</div><!-- /.navbar-header -->
@@ -247,16 +247,16 @@ setInterval(function(){
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/client/ClientSubServlet?m=subDoctorList" title="可预约咨询师" class="iframeurl"><i
-									class="icon-double-angle-right"></i>可预约咨询师</a></li>
+									class="icon-double-angle-right"></i>可预约场地</a></li>
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/client/ClientSubServlet?m=subClientList" title="我的预约" class="iframeurl"><i
 									class="icon-double-angle-right"></i>我的预约</a></li>
 						</ul>
 					</li>
 					
-					<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientSubServlet?m=clientConsult"
+					<%--<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientSubServlet?m=clientConsult"
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
-							class="menu-text"> 我的咨询 </span></a></li>
+							class="menu-text"> 我的咨询 </span></a></li>--%>
 
 					<li>
 					<a href="#" class="dropdown-toggle"><i
@@ -365,7 +365,7 @@ setInterval(function(){
          <!--底部样式-->
        
          <div class="footer_style" id="footerstyle">  
-          <p class="l_f">联系管理员:renshen052@126.com</p>
+          <p class="l_f">联系管理员:xxx@xxx.com</p>
          </div>
 		
 </body>

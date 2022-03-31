@@ -85,8 +85,8 @@
 				<th>申请时间</th>
 				<th>期望时间</th>
 				<th>期望地点</th>
-				<th>主观描述</th>
-				<th >问卷分数</th>                
+				<th>设备申请</th>
+				<th >是否为社团借用</th>
 				<th >操作</th>
 			</tr>
 		</thead>
@@ -114,7 +114,7 @@
           <td class="td-manage">
           <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="sendMessage(this,'${clientArchive.client.clientId}','${clientArchive.client.name}','client')">联系申请者</a>
           <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="showSub('${clientArchive.archivesId}','${clientArchive.clientId}')">查看详情</a>
-          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="consult(this,'${clientArchive.archivesId}','${clientArchive.client.clientId}')">安排咨询</a>
+          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="consult(this,'${clientArchive.archivesId}','${clientArchive.client.clientId}')">安排预约</a>
           <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="cancelSub(this,'${clientArchive.archivesId}','${clientArchive.client.clientId}','${clientArchive.applyTime }')">驳回申请</a>
           </td>
           
