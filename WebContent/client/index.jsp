@@ -246,7 +246,7 @@ setInterval(function(){
 							class="arrow icon-angle-down"></b></a>
 						<ul class="submenu">
 							<li class="home"><a href="javascript:void(0)"
-								name="${pageContext.request.contextPath }/client/ClientSubServlet?m=subDoctorList" title="可预约咨询师" class="iframeurl"><i
+								name="${pageContext.request.contextPath }/client/ClientSubServlet?m=subDoctorList" title="可预约场地管理员" class="iframeurl"><i
 									class="icon-double-angle-right"></i>可预约场地</a></li>
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/client/ClientSubServlet?m=subClientList" title="我的预约" class="iframeurl"><i

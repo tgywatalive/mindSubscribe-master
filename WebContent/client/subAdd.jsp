@@ -33,7 +33,7 @@
     <div class="widget-box side_content" >
      <div class="side_list">
       <div class="widget-header header-color-green2">
-          <h4 class="lighter smaller">咨询师</h4>
+          <h4 class="lighter smaller">场地管理员</h4>
       </div>
        <div class="product_info clearfix">
        
@@ -70,7 +70,7 @@
    <div class="type_title">预约</div>
 	<form action="" method="post" class="form form-horizontal" id="form-article-add">
 		<div class="clearfix cl">
-         <label class="form-label col-2">预约时间：</label>
+         <label class="form-label col-2">期望预约时间：</label>
 		 <div class="formControls col-10"><input type="text" class="input-text" value="" placeholder="您期望的预约时间，如：2019年10月20日-2019年10月22日的下午...等等" id="expectTime" name="expectTime"></div>
 		<div class="formControls col-10"></div>
 		</div>
@@ -81,7 +81,7 @@
 		 <div class="formControls col-10"></div>
 		</div>
 		<div class=" clearfix cl">
-		<div class="formControls col-10"><span style="color:green">为了了解您的心理状况，我们将对您进行简单的问卷调查，请如实填写</span></div>
+		<div class="formControls col-10"><span style="color:green">为了了解您的使用需求，请按需求填写</span></div>
 		</div>
 		
 		<div class="clearfix cl">

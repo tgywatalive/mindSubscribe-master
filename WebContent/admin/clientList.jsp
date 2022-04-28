@@ -75,11 +75,11 @@
     <div id="Member_Ratings">
       <div class="d_Confirm_Order_style">
     <div class="search_style">
-      <div class="title_names">搜索来访者</div>
+      <div class="title_names">搜索学生用户</div>
       <ul class="search_content clearfix">
       <form action="${pageContext.request.contextPath }/client/ClientServlet?m=listClient" method="post">
       
-            <li><label class="l_f">姓名</label><input style="width:70px;" name="name" type="text"  class="text_add" placeholder="来访者的" value="${search.name }" /></li>
+            <li><label class="l_f">姓名</label><input style="width:70px;" name="name" type="text"  class="text_add" placeholder="学生用户的" value="${search.name }" /></li>
             
             <li><label class="l_f">性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input name="sex" type="radio"  class="ace" value="1" ${search.sex eq 1 ? "checked='checked'":"" }/><span class="lbl">男</span>

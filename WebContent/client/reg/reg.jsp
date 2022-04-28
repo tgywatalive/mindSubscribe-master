@@ -23,7 +23,7 @@
 			</script>
 </c:if>
 <div class="signupform">
-<h1>来访者注册</h1>
+<h1>学生用户注册</h1>
 	<div class="container">
 		
 		<div class="agile_info">

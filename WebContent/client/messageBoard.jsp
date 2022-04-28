@@ -174,7 +174,7 @@
 		<form id="messageBoardForm">
 			<ul class=" page-content">
 
-				<li><label class="label_name">留言内容:</label> <textarea
+				<li><label class="label_name">报修地点以及内容:</label> <textarea
 						name="context" id="context" class="textarea"
 						onKeyUp="textarealength(this,1000)" cols="100" rows="10"></textarea>
 					<p class="textarea-numberbar">

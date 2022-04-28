@@ -47,7 +47,7 @@
 										<div class="widget-main" >
 											<h4 class="header blue lighter bigger">
 												<i class="icon-coffee green"></i>
-												来访者登录
+												学生用户登录
 											</h4>
 
 											 <%-- <div class="login_icon"><img src="${pageContext.request.contextPath }/mutualResource/myImg/pencil.jpg" /></div> --%>
