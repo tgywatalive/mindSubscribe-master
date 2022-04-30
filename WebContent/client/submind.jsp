@@ -63,7 +63,7 @@
       <p> 管理员名字： ${doctor.place } </p>
       <p>电话：${doctor.phone }</p>
       <p>电子邮件：${doctor.email }</p>
-      <a href="${pageContext.request.contextPath }/client/ClientSubServlet?m=subStep1&doctorId=${doctor.doctorId}" id="member_add" class="btn btn-warning">我要预约</a>
+      <a href="${pageContext.request.contextPath }/client/ClientSubServlet?m=subStep1&doctorId=${doctor.doctorId}" id="member_add" class="btn btn-warning">我要预约/报修</a>
           <a href="${pageContext.request.contextPath }/client/ClientSubServlet?m=subStep3&doctorId=${doctor.doctorId}" id="member_add" class="btn btn-warning">他人预约查询</a>
       <%--<a style="text-decoration:none" onClick="sendMessage(this,'${doctor.doctorId}','${doctor.name}','doctor')"
 											href="javascript:;" title="预约"

@@ -86,7 +86,7 @@
 								type="text" class="text_add" placeholder="创建者"
 								value="${search.creater }" /></li>
 
-							<li><label class="l_f">内容</label><input name="context"
+							<li><label class="l_f">报修结果</label><input name="context"
 								type="text" class="text_add" placeholder="报修内容"
 								value="${search.context }" /></li>
 							<li><label class="l_f">创建时间：从</label><input
@@ -111,9 +111,9 @@
 				<!---->
 				<c:if test="${not empty LOGIN_DOCTOR }">
 				<div class="border clearfix">
-					<%--<span class="l_f"> <a href="javascript:void()"
+					<span class="l_f"> <a href="javascript:void()"
 						id="member_add" class="btn btn-warning"><i class="icon-plus"></i>报修</a>
-					</span>--%> <span class="r_f">共：<b>${listSize }</b>条
+					</span> <span class="r_f">共：<b>${listSize }</b>条
 					</span>
 				</div>
 				
@@ -128,8 +128,8 @@
 
 						<thead>
 							<tr>
-								<th width=>报修创建者</th>
-								<th>内容</th>
+								<th width=>报修结果创建者</th>
+								<th>报修结果</th>
 								<th width=>创建时间</th>
 							</tr>
 						</thead>
@@ -174,7 +174,7 @@
 		<form id="messageBoardForm">
 			<ul class=" page-content">
 
-				<li><label class="label_name">报修地点以及内容:</label> <textarea
+				<li><label class="label_name">报修结果:</label> <textarea
 						name="context" id="context" class="textarea"
 						onKeyUp="textarealength(this,1000)" cols="100" rows="10"></textarea>
 					<p class="textarea-numberbar">

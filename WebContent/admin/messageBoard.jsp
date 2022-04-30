@@ -76,7 +76,7 @@
 		<div id="Member_Ratings">
 			<div class="d_Confirm_Order_style">
 				<div class="search_style">
-					<div class="title_names">搜索报修信息</div>
+					<div class="title_names">搜索报修结果信息</div>
 					<ul class="search_content clearfix">
 						<form
 							action="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"
@@ -86,7 +86,7 @@
 								type="text" class="text_add" placeholder="创建者"
 								value="${search.creater }" /></li>
 
-							<li><label class="l_f">内容</label><input name="context"
+							<li><label class="l_f">报修结果</label><input name="context"
 								type="text" class="text_add" placeholder="报修内容"
 								value="${search.context }" /></li>
 							<li><label class="l_f">创建时间：从</label><input
@@ -115,7 +115,7 @@
 						<thead>
 							<tr>
 								<th width="100">报修创建者</th>
-								<th>报修内容</th>
+								<th>报修结果</th>
 								<th width="180">创建时间</th>
 								<th width="70">状态</th>
 								<th width="100">操作</th>

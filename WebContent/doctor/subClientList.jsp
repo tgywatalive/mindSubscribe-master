@@ -145,7 +145,7 @@
     <span id="dateTime"></span>
     </li>
      
-     <li class="adderss"><label class="label_name">咨询地址：</label><span class="add_name"><input name="subPlace" style="width: 300px;" id="subPlace" type="text"  class="text_add"  /></span> <div class="prompt r_f"></div> 
+     <li class="adderss"><label class="label_name">预约地址：</label><span class="add_name"><input name="subPlace" style="width: 300px;" id="subPlace" type="text"  class="text_add"  /></span> <div class="prompt r_f"></div>
      <span id="place"></span>
      </li>
      

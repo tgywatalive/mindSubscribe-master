@@ -50,17 +50,17 @@
 
       <span>
      
-      <b>${doctor.name }</b>
+      <b>场地管理员姓名：${doctor.name }</b>
       <p>性别：${doctor.sex eq 1 ? "男":"女" }</p>
       <p>年龄：${doctor.age }</p>
-      <p>等级:${doctor.level }</p>
+      <p>校区:${doctor.level }</p>
       <p>擅长方向：${doctor.skill }</p>
       <p> 一般咨询地点： ${doctor.place } </p>
       <p>电话：${doctor.phone }</p>
       <p>电子邮件：${doctor.email }</p>
       <a style="text-decoration:none" onClick="sendMessage(this,'${doctor.doctorId}','${doctor.name}','doctor')"
-											href="javascript:;" title="预约"
-											class="btn btn-xs btn-success">发送消息</a>
+											href="javascript:;" title="报修"
+											class="btn btn-xs btn-success">我要报修</a>
       </span>
     </div>
   </div>

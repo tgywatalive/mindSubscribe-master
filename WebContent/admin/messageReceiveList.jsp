@@ -85,7 +85,7 @@
 							<select name="sender" value="${search.sender}">
 								<option value="">所有</option>
 								<option value="admin" ${search.sender eq "admin" ? "selected":""}>管理员</option>
-								<option value="doctor" ${search.sender eq "doctor" ? "selected":""}>咨询师</option>
+<%--								<option value="doctor" ${search.sender eq "doctor" ? "selected":""}>咨询师</option>--%>
 								<option value="client" ${search.sender eq "client" ? "selected":""}>来访者</option>
 							</select>
 							</li>

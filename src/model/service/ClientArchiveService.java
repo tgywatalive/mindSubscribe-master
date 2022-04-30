@@ -164,7 +164,7 @@ public class ClientArchiveService {
 			message.setReceiver("client");
 			message.setReceiverId(clientId);
 			message.setReceiverName("接受系统消息方");
-			message.setContext("咨询师：" + doctorNow.getName() + "，取消了您在(" + sdf.format(at) + "时)的申请,如有疑问请与其联系;" + "(邮箱:"
+			message.setContext("场地管理员：" + doctorNow.getName() + "，取消了您在(" + sdf.format(at) + "时)的申请,如有疑问请与其联系;" + "(邮箱:"
 					+ doctorNow.getEmail() + ",电话：" + doctorNow.getPhone() + ")");
 			message.setSendTime(new Date());
 			message.setIsRead(0);
@@ -199,7 +199,7 @@ public class ClientArchiveService {
 		if(email != null) {
 			
 			Mail mail = new Mail();
-			mail.setTitle("咨询安排");
+			mail.setTitle("预约安排");
 			mail.setContent(message.getContext());
 			mail.setTo(email);
 		    boolean result = MailSend.send(mail);
@@ -247,7 +247,7 @@ public class ClientArchiveService {
 			message.setReceiver("client");
 			message.setReceiverId(clientArchive.getClientId());
 			message.setReceiverName("接受系统消息方");
-			message.setContext("咨询师：" + doctorNow.getName() + "，为您安排了咨询，请在\"我的预约\"中查看详情，如有疑问请与其联系;" + "(邮箱:"
+			message.setContext("场地管理员：" + doctorNow.getName() + "，为您安排了预约，请在\"我的预约\"中查看详情，如有疑问请与其联系;" + "(邮箱:"
 					+ doctorNow.getEmail() + ",电话：" + doctorNow.getPhone() + ")");
 			message.setSendTime(new Date());
 			message.setIsRead(0);
@@ -304,7 +304,7 @@ public class ClientArchiveService {
 			message.setReceiver("client");
 			message.setReceiverId(clientId);
 			message.setReceiverName("接受系统消息方");
-			message.setContext("您与：咨询师" + doctorNow.getName() + "的咨询已经完成,如有疑问请与其联系;" + "(邮箱:" + doctorNow.getEmail()
+			message.setContext("您与：场地管理员" + doctorNow.getName() + "的预约已经完成,如有疑问请与其联系;" + "(邮箱:" + doctorNow.getEmail()
 					+ ",电话：" + doctorNow.getPhone() + ")");
 			message.setSendTime(new Date());
 			message.setIsRead(0);

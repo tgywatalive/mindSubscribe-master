@@ -4,7 +4,7 @@
 <form id="SendMessageForm">
 	<ul class=" page-content">
 
-		<li><label class="label_name">消息内容:</label> <textarea
+		<li><label class="label_name"><%--内容:--%></label> <textarea
 				name="context" id="context" class="textarea"
 				onKeyUp="textarealength(this,200)" cols="50" rows="8"></textarea>
 			<p class="textarea-numberbar">
@@ -36,7 +36,7 @@ function sendMessage(an,receiverId,receiverName,receiver){
 	//显示发送消息界面
 	layer.open({
         type: 1,
-        title: '发送消息给:' + receiverName,
+        title: '发送给:' + receiverName,
 		maxmin: true, 
 		shadeClose: false, //点击遮罩关闭层
         area : ['430px' , '390px'],

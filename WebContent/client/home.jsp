@@ -111,7 +111,7 @@
          </div>  
          
          <div class="news_style">
-          <div class="title_name">最新报修</div>
+          <div class="title_name">最新报修结果</div>
           <ul class="list">
           
           	<c:forEach items="${newMessageBoardList }" var="messageBoard">

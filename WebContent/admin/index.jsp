@@ -245,7 +245,7 @@ setInterval(function(){
 							
 					<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/doctor/DoctorServlet?m=listDoctor" title="场地管理员管理"
 						class="iframeurl"><i class="icon-user"></i><span
-							class="menu-text"> 场地管理员管理 </span></a></li>
+							class="menu-text"> 场地管理员和场地管理 </span></a></li>
 							
 					<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientServlet?m=listClient"  title="学生用户管理"
 						class="iframeurl"><i class="icon-user"></i><span
@@ -277,9 +277,9 @@ setInterval(function(){
 							class="menu-text"> 宣传管理 </span></a></li>
 						
 						
-						<%--<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修管理"
+						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修管理"
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 报修管理 </span></a></li>--%>
+							class="menu-text"> 报修结果 </span></a></li>
 						
 						
 

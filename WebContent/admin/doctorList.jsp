@@ -170,7 +170,7 @@
           	<a style="text-decoration:none"
 								onClick="sendMessage(this,'${doctor.doctorId }','${doctor.name }','doctor')"
 											href="javascript:;" title="发送消息"
-											class="btn btn-xs btn-success">发送消息</a>
+											class="btn btn-xs btn-success">提醒上交成果</a>
           	
           	</td>
           	
@@ -187,7 +187,7 @@
           	
           	<a style="text-decoration:none" onClick="sendMessage(this,'${doctor.doctorId }','${doctor.name }','doctor')"
 											href="javascript:;" title="发送消息"
-											class="btn btn-xs btn-success">发送消息</a>
+											class="btn btn-xs btn-success">提醒上交成果</a>
           	
           	</td>
           </c:if>
@@ -223,7 +223,7 @@
      <li><label class="label_name">电话：</label><span class="add_name"><input name="phone" id="phone" type="text"  class="text_add" "/></span><div class="prompt r_f"></div></li>
      
      
-     <li><label class="label_name">等级：</label>
+     <li><label class="label_name">校区：</label>
      <span class="add_name">
      <select name="level">
      	<option value="暂无" id="level0">暂无</option>
@@ -237,7 +237,7 @@
      </li>
      
      
-     <li ><label class="label_name">咨询地址：</label><span class="add_name"><input name="place" id="place" type="text"  class="text_add"  /></span> <div class="prompt r_f"></div> </li>
+     <li ><label class="label_name">具体地址：</label><span class="add_name"><input name="place" id="place" type="text"  class="text_add"  /></span> <div class="prompt r_f"></div> </li>
      
      <li ><label class="label_name">适用活动</label><span class="add_name"><input name="skill" id="skill" type="text"  class="text_add" /></span> <div class="prompt r_f"></div> </li>
      
@@ -552,7 +552,7 @@ function member_edit(id){
 	//显示编辑界面
 	  layer.open({
         type: 1,
-        title: '修改用户信息',
+        title: '修改信息',
 		maxmin: true, 
 		shadeClose:false, //点击遮罩关闭层
         area : ['800px' , ''],

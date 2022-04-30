@@ -268,9 +268,9 @@ setInterval(function(){
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listReceivMessage&reqeustUser" title="消息查看" class="iframeurl"><i
 									class="icon-double-angle-right"></i>收信箱</a></li>
-							<li class="home"><a href="javascript:void(0)"
+							<%--<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listSendMessage&reqeustUser" title="发送消息" class="iframeurl"><i
-									class="icon-double-angle-right"></i>发信箱</a></li>
+									class="icon-double-angle-right"></i>发信箱</a></li>--%>
 						</ul>
 					</li>
 					
@@ -278,7 +278,7 @@ setInterval(function(){
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修"
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 报修 </span></a></li>
+							class="menu-text"> 报修结果 </span></a></li>
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="公告" 
 						class="iframeurl"><i class="icon-edit"></i><span

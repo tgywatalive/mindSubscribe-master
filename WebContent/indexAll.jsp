@@ -5,7 +5,7 @@
 </h2>
 
 <h2>
-<a href="${pageContext.request.contextPath }/client/ClientLoginServlet">学生端口登录</a>
+<a href="${pageContext.request.contextPath }/client/ClientLoginServlet">学生用户端口登录</a>
 </h2>
 
 
@@ -17,7 +17,7 @@
 
 
 <h2>
-<a href="${pageContext.request.contextPath }/doctor/DoctorLoginServlet">场地管理员登录</a>
+<a href="${pageContext.request.contextPath }/doctor/DoctorLoginServlet">场地管理员/校团委教师登录</a>
 </h2>
 
 
