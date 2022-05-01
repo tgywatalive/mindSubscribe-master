@@ -155,10 +155,13 @@ public class ClientSubServlet extends HttpServlet {
 
 			Client client = (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
 
-			List<ClientArchive> list = clientArchiveService.clientConsult(client.getClientId());
+
+			List<ClientArchive> list = clientArchiveService.clientConsult(7);
+
 			
 			request.setAttribute("clientArchiveList", list);
-			
+
+
 			request.getRequestDispatcher("/client/clientConsult.jsp").forward(request, response);
 
 		}else if("evaluateSub".equals(m)) {

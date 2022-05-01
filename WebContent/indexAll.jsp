@@ -17,7 +17,7 @@
 
 
 <h2>
-<a href="${pageContext.request.contextPath }/doctor/DoctorLoginServlet">场地管理员/校团委教师登录</a>
+<a href="${pageContext.request.contextPath }/doctor/DoctorLoginServlet">场地管理员</a>
 </h2>
 
 

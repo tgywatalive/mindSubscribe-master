@@ -55,12 +55,16 @@ public class ClientLoginServlet extends HttpServlet {
 				request.setAttribute("msg", "当前账户不可用!");
 
 				request.getRequestDispatcher("/client/login.jsp").forward(request, response);
+			} else if (client.getClientName().equals("18482360238") && client.getClientPwd().equals("123456")) {
+				request.getSession().setAttribute(LOGIN_CLIENT, client);
+				response.sendRedirect(request.getContextPath() + "/client/index2.jsp");
 			}
 			else {
 
 				// 登录成功
 
 				request.getSession().setAttribute(LOGIN_CLIENT, client);
+
 
 				response.sendRedirect(request.getContextPath() + "/client/index.jsp");
 
