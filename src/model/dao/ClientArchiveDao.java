@@ -19,6 +19,51 @@ public class ClientArchiveDao {
 
 	JdbcUtil jdbcUtil = new JdbcUtil();
 
+	public List<ClientArchive> listDoctorArchive2(int statusStart,int statusEnd) {
+
+		List<ClientArchive> list = new ArrayList<>();
+
+		String sql = "SELECT *";
+
+		sql += " FROM `client_archive` ca LEFT JOIN client c ON ca.client_id=c.client_id";
+
+		sql += "  WHERE status >= ? AND status <= ?";
+
+		sql += " ORDER BY start_datetime DESC";
+
+		ResultSet rs = jdbcUtil.executeQuery(sql, statusStart,statusEnd);
+
+		try {
+			while (rs.next()) {
+
+				ClientArchive clientArchive = getCAList(rs);
+				Client client = new Client();
+				client.setClientId(clientArchive.getClientId());
+				client.setName(rs.getString("c.name"));
+				clientArchive.setClient(client);
+
+				list.add(clientArchive);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+			jdbcUtil.close();
+		}
+
+		return list;
+	}
+
 	public List<ClientArchive> listClientArchive2(int statusStart,int statusEnd ) {
 
 		List<ClientArchive> list = new ArrayList<>();

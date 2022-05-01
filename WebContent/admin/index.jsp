@@ -255,9 +255,15 @@ setInterval(function(){
 						class="iframeurl"><i class="icon-list"></i><span
 							class="menu-text"> 预约信息备注 </span></a></li>
 
+					<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/admin/base?m=doctorConsult2"
+										class="iframeurl" title=""><i class="icon-dashboard"></i><span
+							class="menu-text"> 成果记录 </span></a></li>
+
+					<li>
+
 					<%--<li>
 					<a href="#" class="dropdown-toggle"><i
-							class="icon-edit"></i><span class="menu-text"> 消息 </span>
+							class="icon-edit"></i><span class="menu-text"> 成果回馈 </span>
 							<span id="newMessage" style="color:red"></span>
 							<b
 							class="arrow icon-angle-down"></b></a>
@@ -265,9 +271,9 @@ setInterval(function(){
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listReceivMessage&reqeustUser=admin" title="消息查看" class="iframeurl"><i
 									class="icon-double-angle-right"></i>收信箱</a></li>
-							<li class="home"><a href="javascript:void(0)"
+							&lt;%&ndash;<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listSendMessage&reqeustUser=admin" title="发送消息" class="iframeurl"><i
-									class="icon-double-angle-right"></i>发信箱</a></li>
+									class="icon-double-angle-right"></i>发信箱</a></li>&ndash;%&gt;
 						</ul>
 					</li>--%>
 					

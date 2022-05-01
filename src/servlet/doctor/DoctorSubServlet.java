@@ -52,6 +52,7 @@ public class DoctorSubServlet extends HttpServlet {
 
 		String m = request.getParameter("m");
 
+
 		// 当前登录用户
 		Doctor doctorNow = (Doctor) request.getSession().getAttribute(DoctorLoginServlet.LOGIN_DOCTOR);
 
@@ -82,6 +83,7 @@ public class DoctorSubServlet extends HttpServlet {
 			// 已经完成的咨询记录
 
 			List<ClientArchive> list = clientArchiveService.getSubOk(doctorNow.getDoctorId());
+			//List<ClientArchive> list = clientArchiveService.getSubOk();
 
 			request.setAttribute("clientArchiveList", list);
 
@@ -179,6 +181,7 @@ public class DoctorSubServlet extends HttpServlet {
 			clientArchiveService.uploadSubDoc(archivesId,uploadResult,response);
 
 		}
+
 
 	}
 

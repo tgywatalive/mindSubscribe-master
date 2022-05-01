@@ -116,6 +116,12 @@ public class ClientArchiveService {
 	 */
 	public List<ClientArchive> getSubOk(Integer doctorId) {
 		return clientArchiveDao.listDoctorArchive(doctorId, 3, 3);
+		//return clientArchiveDao.listDoctorArchive2(3, 3);
+	}
+
+	public List<ClientArchive> getSubOk2() {
+		//return clientArchiveDao.listDoctorArchive(doctorId, 3, 3);
+		return clientArchiveDao.listDoctorArchive2(3, 3);
 	}
 
 	/**

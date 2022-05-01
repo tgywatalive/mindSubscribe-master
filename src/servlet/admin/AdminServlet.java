@@ -3,18 +3,17 @@ package servlet.admin;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import bean.*;
 import model.service.ClientService;
 import org.apache.struts2.json.JSONUtil;
 
-import bean.Admin;
-import bean.Announcement;
-import bean.Message;
-import bean.MessageBoard;
 import model.service.AdminService;
 import model.service.AnnouncmentService;
 import model.service.ClientArchiveService;
@@ -174,6 +173,19 @@ public class AdminServlet extends HttpServlet {
 			//查看个人信息
 			
 			request.getRequestDispatcher("/admin/admin_info.jsp").forward(request, response);
+		}
+		else if ("doctorConsult2".equals(m)) {
+			// 咨询记录
+
+			// 已经完成的咨询记录
+
+			//List<ClientArchive> list = clientArchiveService.getSubOk(doctorNow.getDoctorId());
+			List<ClientArchive> list = clientArchiveService.getSubOk2();
+
+			request.setAttribute("clientArchiveList", list);
+
+			request.getRequestDispatcher("/doctor/doctorConsult.jsp").forward(request, response);
+
 		}
 		
 	
