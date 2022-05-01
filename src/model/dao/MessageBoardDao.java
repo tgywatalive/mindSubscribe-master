@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import bean.Doctor;
+
 import bean.Client;
 import bean.MessageBoard;
 import utils.Util;
@@ -36,12 +38,13 @@ public class MessageBoardDao {
 
 		List<Object> searchList = new ArrayList<Object>();
 
-		String sql = "SELECT * FROM message_board m LEFT JOIN client c ON m.creater_id=c.client_id WHERE 1=1 ";
+		//String sql = "SELECT * FROM message_board m LEFT JOIN client c ON m.creater_id=c.client_id WHERE 1=1 ";
+		String sql = "SELECT * FROM message_board m LEFT JOIN doctor d ON m.creater_id=d.doctor_id WHERE 1=1 ";
 
 		// 创建者
 		if (Util.isNotEmpty(search.get("creater"))) {
 
-			sql += " AND c.name like concat('%',?,'%')";
+			sql += " AND d.name like concat('%',?,'%')";
 			searchList.add(search.get("creater"));
 		}
 
@@ -75,19 +78,28 @@ public class MessageBoardDao {
 				MessageBoard messageBoard = new MessageBoard();
 				messageBoard.setBoardId(rs.getInt("board_id"));
 				messageBoard.setContext(rs.getString("context"));
-				messageBoard.setCreaterId(rs.getInt("client_id"));
+				//messageBoard.setCreaterId(rs.getInt("client_id"));
+				messageBoard.setCreaterId(rs.getInt("doctor_id"));
 				messageBoard.setCreateTime(rs.getTimestamp("create_time"));
 				messageBoard.setIsActive(rs.getInt("is_active"));
 				
 				
-				Client client = new Client();
+				/*Client client = new Client();
 				client.setClientId(rs.getInt("client_id"));
 				client.setName(rs.getString("name"));
 				client.setEmail(rs.getString("email"));
 				client.setPhone(rs.getString("phone"));
 				
-				messageBoard.setClient(client); 
-				
+				messageBoard.setClient(client);*/
+
+				Doctor doctor = new Doctor();
+				doctor.setDoctorId(rs.getInt("doctor_id"));
+				doctor.setName(rs.getString("name"));
+				doctor.setEmail(rs.getString("email"));
+				doctor.setPhone(rs.getString("phone"));
+
+				messageBoard.setDoctor(doctor);
+
 				list.add(messageBoard);
 
 			}
@@ -150,8 +162,9 @@ public class MessageBoardDao {
 	 */
 	public MessageBoard getMessageBoard(int messageBoardId) {
 
-		String sql = "SELECT * FROM message_board m LEFT JOIN client c ON m.creater_id=c.clientId WHERE m.board_id=? ";
-		
+		//String sql = "SELECT * FROM message_board m LEFT JOIN client c ON m.creater_id=c.clientId WHERE m.board_id=? ";
+		String sql = "SELECT * FROM message_board m LEFT JOIN doctor d ON m.creater_id=d.doctor_id WHERE m.board_id=? ";
+
 		ResultSet rs = jdbcUtil.executeQuery(sql, messageBoardId);
 		
 		MessageBoard messageBoard = null;
@@ -163,20 +176,29 @@ public class MessageBoardDao {
 				
 				messageBoard.setBoardId(rs.getInt("board_id"));
 				messageBoard.setContext(rs.getString("context"));
-				messageBoard.setCreaterId(rs.getInt("client_id"));
+				//messageBoard.setCreaterId(rs.getInt("client_id"));
+				messageBoard.setCreaterId(rs.getInt("doctor_id"));
 				messageBoard.setCreateTime(rs.getTimestamp("create_time"));
 				messageBoard.setIsActive(rs.getInt("is_active"));
 				
 				
-				Client client = new Client();
+				/*Client client = new Client();
 				client.setClientId(rs.getInt("client_id"));
 				client.setName(rs.getString("name"));
 				client.setEmail(rs.getString("email"));
 				client.setPhone(rs.getString("phone"));
 				
-				messageBoard.setClient(client); 
-				
-				
+				messageBoard.setClient(client);*/
+
+				Doctor doctor = new Doctor();
+				doctor.setDoctorId(rs.getInt("doctor_id"));
+				doctor.setName(rs.getString("name"));
+				doctor.setEmail(rs.getString("email"));
+				doctor.setPhone(rs.getString("phone"));
+
+				messageBoard.setDoctor(doctor);
+
+
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -207,7 +229,8 @@ public class MessageBoardDao {
 
 		ArrayList<MessageBoard> list = new ArrayList<>();
 
-		String sql = "SELECT * FROM message_board m LEFT JOIN `client` c ON m.creater_id=c.client_id WHERE m.is_active=1 ORDER BY create_time DESC LIMIT ?; ";
+		//String sql = "SELECT * FROM message_board m LEFT JOIN `client` c ON m.creater_id=c.client_id WHERE m.is_active=1 ORDER BY create_time DESC LIMIT ?; ";
+		String sql = "SELECT * FROM message_board m LEFT JOIN `doctor` d ON m.creater_id=d.doctor_id WHERE m.is_active=1 ORDER BY create_time DESC LIMIT ?; ";
 
 
 		ResultSet rs = jdbcUtil.executeQuery(sql, num);
@@ -218,19 +241,28 @@ public class MessageBoardDao {
 				MessageBoard messageBoard = new MessageBoard();
 				messageBoard.setBoardId(rs.getInt("board_id"));
 				messageBoard.setContext(rs.getString("context"));
-				messageBoard.setCreaterId(rs.getInt("client_id"));
+				//messageBoard.setCreaterId(rs.getInt("client_id"));
+				messageBoard.setCreaterId(rs.getInt("doctor_id"));
 				messageBoard.setCreateTime(rs.getTimestamp("create_time"));
 				messageBoard.setIsActive(rs.getInt("is_active"));
 				
 				
-				Client client = new Client();
+				/*Client client = new Client();
 				client.setClientId(rs.getInt("client_id"));
 				client.setName(rs.getString("name"));
 				client.setEmail(rs.getString("email"));
 				client.setPhone(rs.getString("phone"));
 				
-				messageBoard.setClient(client); 
-				
+				messageBoard.setClient(client);*/
+
+				Doctor doctor = new Doctor();
+				doctor.setDoctorId(rs.getInt("doctor_id"));
+				doctor.setName(rs.getString("name"));
+				doctor.setEmail(rs.getString("email"));
+				doctor.setPhone(rs.getString("phone"));
+
+				messageBoard.setDoctor(doctor);
+
 				list.add(messageBoard);
 
 			}

@@ -12,9 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import bean.Client;
+import bean.Doctor;
 import bean.MessageBoard;
 import model.service.MessageBoardService;
 import servlet.client.ClientLoginServlet;
+import servlet.doctor.DoctorLoginServlet;
 
 /**
  * @author h w j
@@ -108,7 +110,9 @@ public class MessageBoardServlet extends HttpServlet {
 			String context = request.getParameter("context");
 			
 			//创建者
-			Client client =  (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
+			//Client client =  (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
+			// doctor
+			Doctor doctor =  (Doctor) request.getSession().getAttribute(DoctorLoginServlet.LOGIN_DOCTOR);
 
 
 			// 将表单对象封装为MessageBoard对象
@@ -116,7 +120,9 @@ public class MessageBoardServlet extends HttpServlet {
 			messageBoard.setContext(context);
 			messageBoard.setCreateTime(new Date());
 			messageBoard.setIsActive(1);
-			messageBoard.setCreaterId(client.getClientId());
+			//messageBoard.setCreaterId(client.getClientId());
+			// doctor添加
+			messageBoard.setCreaterId(doctor.getDoctorId());
 			
 			//增加一个留言
 			messageBoardService.addMessageBoard(messageBoard,response);

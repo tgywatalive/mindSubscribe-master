@@ -254,9 +254,9 @@ setInterval(function(){
 						</ul>
 					</li>
 					
-					<%--<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientSubServlet?m=clientConsult"
+					<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientSubServlet?m=clientConsult"
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
-							class="menu-text"> 我的咨询 </span></a></li>--%>
+							class="menu-text"> 我的预约记录 </span></a></li>
 
 					<li>
 					<a href="#" class="dropdown-toggle"><i
@@ -276,9 +276,9 @@ setInterval(function(){
 					
 						
 						
-						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修"
+						<%--<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修"
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 报修结果 </span></a></li>
+							class="menu-text"> 报修结果 </span></a></li>--%>
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="公告" 
 						class="iframeurl"><i class="icon-edit"></i><span

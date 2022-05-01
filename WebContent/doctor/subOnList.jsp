@@ -193,7 +193,7 @@ jQuery(function($) {
  */
 function finshSub(obj,archivesId,clientId,applyTime){
 	
-layer.confirm('请检查本次咨询所需工作已全部完成（咨询文档必须上传），如果您已经完成，请点击确定！',function(index){
+layer.confirm('请检查本次预约所需工作已全部完成（成果文档必须上传），如果您已经完成，请点击确定！',function(index){
 
 	
 		if($.trim($("#doc").text()) == "未上传"){

@@ -86,7 +86,7 @@
 								type="text" class="text_add" placeholder="创建者"
 								value="${search.creater }" /></li>
 
-							<li><label class="l_f">报修结果</label><input name="context"
+							<li><label class="l_f">报修及结果</label><input name="context"
 								type="text" class="text_add" placeholder="报修内容"
 								value="${search.context }" /></li>
 							<li><label class="l_f">创建时间：从</label><input
@@ -128,8 +128,8 @@
 
 						<thead>
 							<tr>
-								<th width=>报修结果创建者</th>
-								<th>报修结果</th>
+								<th width=>场地管理员</th>
+								<th>报修及结果</th>
 								<th width=>创建时间</th>
 							</tr>
 						</thead>
@@ -141,7 +141,7 @@
 							
 							<tr>
 
-									<td>${messageBoard.client.name }</td>
+									<td>${messageBoard.doctor.name }</td>
 
 
 									<td class="text-l">${messageBoard.context }</td>

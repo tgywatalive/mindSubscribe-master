@@ -39,6 +39,8 @@ public class MessageBoard {
 	 * @return
 	 */
 	private Client client;
+	//doctor添加
+	private Doctor doctor;
 
 	public Integer getBoardId() {
 		return boardId;
@@ -87,11 +89,26 @@ public class MessageBoard {
 	public void setClient(Client client) {
 		this.client = client;
 	}
+	//添加doctor
+	public Doctor getDoctor() {
+		return doctor;
+	}
+
+	public void setDoctor(Doctor doctor) {
+		this.doctor = doctor;
+	}
+
+
+	/*@Override
+	public String toString() {
+		return "MessageBoard [boardId=" + boardId + ", context=" + context + ", createrId=" + createrId
+				+ ", createTime=" + createTime + ", isActive=" + isActive + ", client=" + client + "]\n";
+	}*/
 
 	@Override
 	public String toString() {
 		return "MessageBoard [boardId=" + boardId + ", context=" + context + ", createrId=" + createrId
-				+ ", createTime=" + createTime + ", isActive=" + isActive + ", client=" + client + "]\n";
+				+ ", createTime=" + createTime + ", isActive=" + isActive + ", doctor=" + doctor + "]\n";
 	}
 	
 }
