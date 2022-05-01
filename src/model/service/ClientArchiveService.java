@@ -54,8 +54,9 @@ public class ClientArchiveService {
 	 * @param clientId 咨询记录中来访者id
 	 * @return 咨询记录对象集合
 	 */
-	public List<ClientArchive> clientConsult(Integer clientId) {
-		return clientArchiveDao.listClientArchive(clientId, 2, 3);
+	public List<ClientArchive> clientConsult() {
+		//return clientArchiveDao.listClientArchive(clientId, 2, 3);
+		return clientArchiveDao.listClientArchive2(2, 3);
 	}
 
 	/**

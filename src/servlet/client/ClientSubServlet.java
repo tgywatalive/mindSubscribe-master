@@ -153,10 +153,10 @@ public class ClientSubServlet extends HttpServlet {
 
 			// 已经完成的预约列表
 
-			Client client = (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
+			//Client client = (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
 
 
-			List<ClientArchive> list = clientArchiveService.clientConsult(7);
+			List<ClientArchive> list = clientArchiveService.clientConsult();
 
 			
 			request.setAttribute("clientArchiveList", list);

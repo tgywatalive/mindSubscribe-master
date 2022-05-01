@@ -19,6 +19,54 @@ public class ClientArchiveDao {
 
 	JdbcUtil jdbcUtil = new JdbcUtil();
 
+	public List<ClientArchive> listClientArchive2(int statusStart,int statusEnd ) {
+
+		List<ClientArchive> list = new ArrayList<>();
+
+		String sql = "SELECT *";
+
+		sql += " FROM `client_archive` ca LEFT JOIN doctor d ON ca.doctor_id=d.doctor_id";
+
+		sql += "  WHERE status >= ? AND status <= ?";
+
+		//sql += "  WHERE client_id=? AND status >= ? AND status <= ?";
+
+		sql += " ORDER BY apply_time DESC";
+
+		ResultSet rs = jdbcUtil.executeQuery(sql, statusStart,statusEnd);
+
+		try {
+			while (rs.next()) {
+
+				ClientArchive clientArchive = getCAList(rs);
+				Doctor doctor = new Doctor();
+				doctor.setDoctorId(clientArchive.getDoctorId());
+				doctor.setName(rs.getString("d.name"));
+				clientArchive.setDoctor(doctor);
+
+
+				list.add(clientArchive);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+			jdbcUtil.close();
+		}
+
+		return list;
+	}
+
 	/**
 	 * 查询共有多少条咨询记录
 	 * 
@@ -71,6 +119,8 @@ public class ClientArchiveDao {
 		String sql = "SELECT *";
 
 		sql += " FROM `client_archive` ca LEFT JOIN doctor d ON ca.doctor_id=d.doctor_id";
+
+		//sql += "  WHERE status >= ? AND status <= ?";
 		
 		sql += "  WHERE client_id=? AND status >= ? AND status <= ?";
 		
