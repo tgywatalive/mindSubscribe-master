@@ -115,7 +115,7 @@
 						<thead>
 							<tr>
 								<th width="100">报修创建者</th>
-								<th>报修结果</th>
+								<th>报修内容及结果</th>
 								<th width="180">创建时间</th>
 								<th width="70">状态</th>
 								<th width="100">操作</th>
@@ -127,7 +127,7 @@
 
 								<tr>
 
-									<td>${messageBoard.client.name }</td>
+									<td>${messageBoard.doctor.name }</td>
 
 
 									<td class="text-l">${messageBoard.context }</td>
