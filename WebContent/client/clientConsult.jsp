@@ -86,8 +86,8 @@
 				<th>申请时间</th>
 				<th>咨询开始时间</th>
 				<th>咨询结束时间</th>
-				<th>咨询记录文档</th>
-				<th>回访评价</th>
+				<th>成果文档</th>
+				<th>成果评价</th>
 				<th >操作</th>
 			</tr>
 		</thead>
@@ -202,7 +202,7 @@ function evaluateSub(archivesId){
 	
 	layer.open({
         type: 1,
-        title: '对本次咨询评价',
+        title: '对本次成果评价',
 		maxmin: true, 
 		shadeClose: false, //点击遮罩关闭层
         area : ['430px' , '390px'],

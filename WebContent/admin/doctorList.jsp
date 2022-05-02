@@ -243,7 +243,7 @@
      
      <!-- 图片 -->
      <li >
-     <label class="label_name">个人图片</label>
+     <label class="label_name">场地图片</label>
      <span class="add_name" id="img">
      <input name="imgPath" type="hidden"/>
      <img src="${pageContext.request.contextPath }/mutualResource/images/image.png" width="77.7" height="77.7" />

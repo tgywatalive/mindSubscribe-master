@@ -285,7 +285,7 @@ setInterval(function(){
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/board/MessageBoardServlet?m=listMessageBoard"  title="报修管理"
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 报修结果 </span></a></li>
+							class="menu-text"> 报修及结果 </span></a></li>
 						
 						
 
