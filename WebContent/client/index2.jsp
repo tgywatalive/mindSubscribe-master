@@ -256,7 +256,7 @@ setInterval(function(){
 					
 					<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientSubServlet?m=clientConsult"
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
-							class="menu-text">成果管理</span></a></li>
+							class="menu-text">成果审核</span></a></li>
 
 					<%--<li>
 					<a href="#" class="dropdown-toggle"><i

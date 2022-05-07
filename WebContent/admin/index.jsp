@@ -257,7 +257,7 @@ setInterval(function(){
 
 					<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/admin/base?m=doctorConsult2"
 										class="iframeurl" title=""><i class="icon-dashboard"></i><span
-							class="menu-text"> 成果记录 </span></a></li>
+							class="menu-text"> 成果审核结果 </span></a></li>
 
 					<li>
 
