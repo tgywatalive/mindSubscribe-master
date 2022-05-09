@@ -110,7 +110,7 @@
           </ul>
          </div>  
          
-         <div class="news_style">
+         <%--<div class="news_style">
           <div class="title_name">最新报修结果</div>
           <ul class="list">
           
@@ -126,7 +126,7 @@
           	
           	</c:forEach>
           </ul>
-         </div>
+         </div>--%>
          
          
          </div>

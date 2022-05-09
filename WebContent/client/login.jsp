@@ -33,7 +33,7 @@
 	<div class="center">
 	<h1>
 									<i class="icon-leaf green"></i>
-									<span class="orange">文娱场所管理信息系统</span>
+									<span class="orange">文娱场所管理信息</span>
 									<span class="orange">系统</span>
 								</h1>
 								<h4 class="orange">为你来</h4>
@@ -47,7 +47,7 @@
 										<div class="widget-main" >
 											<h4 class="header blue lighter bigger">
 												<i class="icon-coffee green"></i>
-												学生用户登录
+												登录
 											</h4>
 
 											 <%-- <div class="login_icon"><img src="${pageContext.request.contextPath }/mutualResource/myImg/pencil.jpg" /></div> --%>

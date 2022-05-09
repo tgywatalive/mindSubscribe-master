@@ -222,7 +222,7 @@ setInterval(function(){
 					</script>
 					<div class="sidebar-shortcuts" id="sidebar-shortcuts">
                      <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-						来访者  
+                         学生用户
 						</div>
 						<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
 							<span class="btn btn-success"></span>

@@ -82,7 +82,7 @@
        <table class="table table-striped table-bordered table-hover" id="sample-table">
 		<thead>
 		 <tr>
- 				<th >咨询师</th>
+ 				<th >场地管理员</th>
 				<th>申请时间</th>
 				<th>咨询开始时间</th>
 				<th>咨询结束时间</th>
