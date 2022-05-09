@@ -82,12 +82,13 @@
        <table class="table table-striped table-bordered table-hover" id="sample-table">
 		<thead>
 		 <tr>
- 				<th >预约者</th>
-				<th>预约开始开始时间</th>
-				<th>预约结束时间</th>
-				<th>预约地点</th>
-				<th >成果文档</th>
+ 				<th >场地管理员</th>
+				<th>申请时间</th>
+				<th>咨询开始时间</th>
+				<th>咨询结束时间</th>
+				<th>成果文档</th>
 				<th>成果评价</th>
+<%--				<th >操作</th>--%>
 			</tr>
 		</thead>
 	<tbody>
@@ -95,29 +96,35 @@
 	
 		<tr>
            
-          <td>${clientArchive.client.name }</td>
+          <td>${clientArchive.doctor.name }</td>
           
-         <td class="text-l"><fmt:formatDate value="${clientArchive.startDatetime }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
+          <td><fmt:formatDate value="${clientArchive.applyTime }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
           
-          <td class="text-l"><fmt:formatDate value="${clientArchive.endDatetime }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
+          <td><fmt:formatDate value="${clientArchive.startDatetime }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
           
-          
-          <td>${clientArchive.subPlace }</td>
-          
+          <td><fmt:formatDate value="${clientArchive.endDatetime }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
           
           <td>
-          <u style="cursor:pointer" class="text-primary" onclick="javascript:window.location='${pageContext.request.contextPath}/DownloadFile?m=downloadSubDoc&subDocPath=${clientArchive.docPath }&filename=${clientArchive.client.name}_${LOGIN_DOCTOR.name }'">${clientArchive.client.name}_${LOGIN_DOCTOR.name }</u>
+          <c:if test="${not empty clientArchive.docPath}">
+                    <u style="cursor:pointer" class="text-primary" onclick="javascript:window.location='${pageContext.request.contextPath}/DownloadFile?m=downloadSubDoc&subDocPath=${clientArchive.docPath }&filename=${clientArchive.doctor.name}_${LOGIN_CLIENT.name }'">${clientArchive.doctor.name}_${LOGIN_CLIENT.name }</u>
 
-		  </td>
-          
-          <td>
-          <c:if test="${empty clientArchive.secondQuestionContext}">
-          	还未做出评价！
           </c:if>
-          ${clientArchive.secondQuestionContext}
+          <c:if test="${empty clientArchive.docPath }">
+          未上传，请联系场地管理员！
+          </c:if>
           </td>
           
+          <td>
+          	${clientArchive.secondQuestionContext}
+          </td>
+          
+          <%--<td class="td-manage">
+          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="sendMessage(this,'${clientArchive.doctor.doctorId}','${clientArchive.doctor.name}','doctor')">联系场地管理员</a>
+          <a style="text-decoration:none" class="btn btn-xs btn-success" onclick="evaluateSub(${clientArchive.archivesId})">评价一下</a>
+          </td>--%>
+          
 		</tr>
+	
 	
 	</c:forEach>
 	
@@ -130,10 +137,30 @@
  </div>
 </div>
 <%@include file="/mutualResource/form/SendMessageForm.jsp"%>
+
+<!--评价的弹出层 -->
+<div class="add_menber" id="evaluateSubDiv" style="display:none">
+<form id="evaluateSubForm">
+	<ul class=" page-content">
+
+		<li><label class="label_name">评价内容:</label> <textarea
+				name="context" id="context" class="textarea"
+				onKeyUp="textarealength(this,200)" cols="50" rows="8"></textarea>
+			<p class="textarea-numberbar">
+				<em class="textarea-length">0</em>/200
+			</p>
+			<div style="color:red" class="prompt r_f" id="evaluateSubFormDiv"></div></li>
+	</ul>
+
+</form>
+</div>
+
 </body>
 </html>
 <script>
 jQuery(function($) {
+	
+	
 	var oTable1 = $('#sample-table').dataTable( {
 		 "bSort" : true, //是否启动各个字段的排序功能  
 		"bStateSave": true,//状态保存
@@ -171,6 +198,97 @@ jQuery(function($) {
 				
 				
 			});
+function evaluateSub(archivesId){
+	
+	layer.open({
+        type: 1,
+        title: '对本次成果评价',
+		maxmin: true, 
+		shadeClose: false, //点击遮罩关闭层
+        area : ['430px' , '390px'],
+        content:$('#evaluateSubDiv'),
+		btn:['确认','取消'],
+		yes:function(index,layero){	
+			
+			var msg = "";
+			
+			if(isAble()){
+				//如果数据合法
+				
+				//ajax上传
+			     $.ajax({  
+			          url: '${pageContext.request.contextPath }/client/ClientSubServlet?m=evaluateSub&archivesId='+archivesId ,  
+			          type: 'POST',  
+			          dataType:'json', 
+			          data: $("#evaluateSubForm").serialize(),  
+			          cache: false,  
+			          success: function (data) { 
+			        	  
+			        	  if(data.isSuccess){
+			        		  
+			        		  msg = "评价成功！";
+			        		  
+			        		  $('#evaluateSubFormDiv').val("");
+			        		  layer.alert(msg,
+						    		  
+			   	 	               {title: '提示框',				
+			   	 					icon:1,	}	,
+			   	 					function(){
+			   	 						location.reload();
+			   	 				  }); 
+			        		  
+			        	  }else{
+			        		  msg = data.msg;
+			        		  layer.alert(msg,
+			   	 	               {title: '提示框',				
+			   	 					icon:1,	}
+			   	 					);
+			        	  }
+			          },  
+			          error: function (returndata) {  
+			        	  msg = "失败请刷新后重试"; 
+			        	  layer.alert(msg,
+					    		  
+				 	               {title: '提示框',				
+				 					icon:1,	}
+				 					);
+			        	  
+			          }  
+			     }); 
+				
+			     layer.close(index);
+			     
+				
+			}else{
+				
+				layer.alert("请填写正确的数据！",{
+	 	               title: '提示框',				
+	 				icon:1,		
+	 				  });
+				
+			}
+		     
+		}
+    });
+	
+	
+}
+/**
+ * 对表单验证合法性
+ */
+ function isAble(){
+	
+	var isOk = true;
+	
+	var text = $.trim($("#evaluateSubForm").find("#context").val());
 
+	if(text.length > 200 || text ==""){
+		isOk = false;
+		$("#evaluateSubFormDiv").html("消息长度为1-200字符");
+	}
+	 
+	 return isOk;
+	
+}
 
 </script>

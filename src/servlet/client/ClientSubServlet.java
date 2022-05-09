@@ -20,6 +20,8 @@ import model.service.QuestionService;
 import servlet.MessageServlet;
 import servlet.doctor.DoctorLoginServlet;
 
+import static servlet.client.ClientLoginServlet.LOGIN_CLIENT;
+
 /**
  * Servlet implementation class ClientSubServlet 普通来访者的预约咨询业务
  */
@@ -49,12 +51,12 @@ public class ClientSubServlet extends HttpServlet {
 		String m = request.getParameter("m");
 
 		// 当前登录用户
-		Client clientNow = (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
+		Client clientNow = (Client) request.getSession().getAttribute(LOGIN_CLIENT);
 
 		/*// 管理员权限输入
 		Doctor doctorNow = (Doctor) request.getSession().getAttribute(DoctorLoginServlet.LOGIN_DOCTOR);*/
 
-		
+
 		if ("subDoctorList".equals(m)) {//可预约咨询师
 
 			// 显示可供预约的咨询师列表
@@ -69,11 +71,11 @@ public class ClientSubServlet extends HttpServlet {
 
 			// 显示正在预约的申请
 
-			Client client = (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
+			Client client = (Client) request.getSession().getAttribute(LOGIN_CLIENT);
 
 			List<ClientArchive> list = clientArchiveService.onSubList(client.getClientId());
-			
-			
+
+
 			request.setAttribute("clientArchiveList", list);
 
 			request.getRequestDispatcher("/client/onSubList.jsp").forward(request, response);
@@ -81,21 +83,21 @@ public class ClientSubServlet extends HttpServlet {
 		} else if ("subStep1".equals(m)) {
 
 			// 预约第一步，跳转到预约界面
-			
+
 			//查询预约的咨询师
-			
+
 			String doctorId = request.getParameter("doctorId");
-			
+
 			Doctor doctor = doctorService.getDoctorById(Integer.parseInt(doctorId));
-			
+
 			request.setAttribute("doctor", doctor);
-			
+
 			//查询问卷内容
 			ArrayList<Question> list = questionService.listQuestion("");
-			
+
 			request.setAttribute("questionList", list);
-			
-			
+
+
 			request.getRequestDispatcher("/client/subAdd.jsp").forward(request, response);
 
 
@@ -103,27 +105,27 @@ public class ClientSubServlet extends HttpServlet {
 
 			//预约第二步
 			// 保存
-			
+
 			//取得各个数据
 			String expectTime = request.getParameter("expectTime");
-			
+
 			String expectPlace = request.getParameter("expectPlace");
-			
+
 			String doctorId = request.getParameter("doctorId");
 
 //			doctorIdTest = doctorId;
-			
+
 			String clientDescription = request.getParameter("clientDescription");
-			
-			
-			
+
+
+
 			//返回questionId，，用"，"隔开
 			String questionIds = request.getParameter("questionIds");
-			
+
 			//解析questionIds,返回json字符串，和分值
 			HashMap<String,String> mapJsonLevel = questionService.getJSON(questionIds,request);
-			
-			
+
+
 			ClientArchive clientArchive = new ClientArchive();
 			clientArchive.setClientId(clientNow.getClientId());
 			clientArchive.setDoctorId(Integer.parseInt(doctorId));
@@ -133,9 +135,9 @@ public class ClientSubServlet extends HttpServlet {
 			clientArchive.setApplyTime(new Date());
 			clientArchive.setExpectPlace(expectPlace);
 			clientArchive.setExpectTime(expectTime);
-			
+
 			clientArchiveService.addClientArchive(clientArchive,response);
-			
+
 
 		} else if ("subStep3".equals(m)) {
 			//得到当前登录的用户
@@ -153,29 +155,45 @@ public class ClientSubServlet extends HttpServlet {
 
 			// 已经完成的预约列表
 
-			//Client client = (Client) request.getSession().getAttribute(ClientLoginServlet.LOGIN_CLIENT);
+			//Client client = (Client) request.getSession().getAttribute(LOGIN_CLIENT);
 
 
 			List<ClientArchive> list = clientArchiveService.clientConsult();
 
-			
+
+			request.setAttribute("clientArchiveList", list);
+
+
+			request.getRequestDispatcher("/client/clientConsult2.jsp").forward(request, response);
+
+		}else if ("clientConsult2".equals(m)) {//我的咨询
+
+			// 已经完成的预约列表
+
+			//Client client = (Client) request.getSession().getAttribute(LOGIN_CLIENT);
+
+
+			List<ClientArchive> list = clientArchiveService.clientConsult();
+
+
 			request.setAttribute("clientArchiveList", list);
 
 
 			request.getRequestDispatcher("/client/clientConsult.jsp").forward(request, response);
 
-		}else if("evaluateSub".equals(m)) {
+		}
+		else if("evaluateSub".equals(m)) {
 			//评价本次咨询
-			
+
 			String archivesId = request.getParameter("archivesId");
-			
+
 			String context = request.getParameter("context");
-			
+
 			System.out.println(context + "---");
-			
+
 			//评价本次咨询
 			clientArchiveService.evaluateSub(archivesId,context,response);
-			
+
 		}
 
 	}

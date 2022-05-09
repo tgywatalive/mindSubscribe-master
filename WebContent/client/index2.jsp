@@ -254,7 +254,7 @@ setInterval(function(){
 						</ul>
 					</li>--%>
 					
-					<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientSubServlet?m=clientConsult"
+					<li class="home"><a href="javascript:void(0)" name="${pageContext.request.contextPath }/client/ClientSubServlet?m=clientConsult2"
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
 							class="menu-text">成果审核</span></a></li>
 
