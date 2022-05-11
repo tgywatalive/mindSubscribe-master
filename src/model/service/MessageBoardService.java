@@ -102,7 +102,7 @@ public class MessageBoardService {
 		if (i == 1) {
 			// 留言成功
 			rd.setIsSuccess(true);
-			rd.setMsg("留言成功");
+			rd.setMsg("成功");
 
 		} else {
 

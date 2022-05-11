@@ -47,7 +47,7 @@
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
 												<i class="icon-coffee green"></i>
-												场所管理员/校团委教师登录
+												场所管理员登录
 											</h4>
 
 											<%-- <div class="login_icon"><img src="${pageContext.request.contextPath }/mutualResource/images/login.png" /></div> --%>
