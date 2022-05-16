@@ -60,7 +60,7 @@
 <%--      <p>年龄：${doctor.age }</p>--%>
       <p>校区:${doctor.level }</p>
       <p>适用活动：${doctor.skill }</p>
-      <p> 管理员名字： ${doctor.place } </p>
+      <p> 具体位置： ${doctor.place } </p>
       <p>电话：${doctor.phone }</p>
       <p>电子邮件：${doctor.email }</p>
       <a href="${pageContext.request.contextPath }/client/ClientSubServlet?m=subStep1&doctorId=${doctor.doctorId}" id="member_add" class="btn btn-warning">我要预约/报修</a>
