@@ -31,7 +31,7 @@ import utils.Util;
 /**
  * @author h w j
  * @instruction
- * 管理员端，管理咨询师相关操作的控制器
+ * 学生用户端，管理咨询师相关操作的控制器
  */
 @MultipartConfig
 public class DoctorServlet extends HttpServlet {

@@ -93,7 +93,7 @@
           </ul>
          </div>  
         <div class="news_style">
-          <div class="title_name">最新公告</div>
+          <div class="title_name">宣传信息</div>
           <ul class="list">
           
           	<c:forEach items="${announcmentList }" var="announcment">

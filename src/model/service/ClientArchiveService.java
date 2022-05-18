@@ -21,7 +21,7 @@ import utils.mail.MailSend;
 /**
  * @author h w j
  * @instruction
- * 咨询记录的Service
+ * 预约记录的Service
  */
 public class ClientArchiveService {
 
@@ -30,29 +30,29 @@ public class ClientArchiveService {
 	MessageDao messageDao = new MessageDao();
 
 	/**
-	 * 查询共有多少条咨询记录
+	 * 查询共有多少条预约记录
 	 * 
-	 * @return 咨询记录对象
+	 * @return 预约记录对象
 	 */
 	public int getClientArchiveNum() {
 		return clientArchiveDao.getClientArchiveNum();
 	}
 
 	/**
-	 * 查询来访者正在预约的申请
+	 * 查询学生用户正在预约的申请
 	 * 
-	 * @param clientId 咨询记录中来访者id
-	 * @return 咨询记录对象集合
+	 * @param clientId 预约记录中学生用户id
+	 * @return 预约记录对象集合
 	 */
 	public List<ClientArchive> onSubList(Integer clientId) {
 		return clientArchiveDao.listClientArchive(clientId, -1, 1);
 	}
 
 	/**
-	 * 查询来访者已经完成的预约
+	 * 查询学生用户已经完成的预约
 	 * 
-	 * @param clientId 咨询记录中来访者id
-	 * @return 咨询记录对象集合
+	 * @param clientId 预约记录中学生用户id
+	 * @return 预约记录对象集合
 	 */
 	public List<ClientArchive> clientConsult() {
 		//return clientArchiveDao.listClientArchive(clientId, 2, 3);
@@ -62,7 +62,7 @@ public class ClientArchiveService {
 	/**
 	 * 添加一次申请,并且响应客户端
 	 * 
-	 * @param clientArchive 咨询记录对象
+	 * @param clientArchive 预约记录对象
 	 * @param response 响应对象
 	 */
 	public void addClientArchive(ClientArchive clientArchive, HttpServletResponse response) {
@@ -89,30 +89,30 @@ public class ClientArchiveService {
 	}
 
 	/**
-	 * 查询 id为doctorId 的咨询师，接受到的所有申请(未通过的)
+	 * 查询 id为doctorId 的场地管理员，接受到的所有申请(未通过的)
 	 * 
-	 * @param doctorId 咨询记录中对应的咨询师id
-	 * @return 咨询记录对象集合
+	 * @param doctorId 预约记录中对应的场地管理员id
+	 * @return 预约记录对象集合
 	 */
 	public List<ClientArchive> getAllSubFromClient(Integer doctorId) {
 		return clientArchiveDao.listDoctorArchive(doctorId, 0, 0);
 	}
 
 	/**
-	 * 显示咨询师所有正在咨询中的记录
+	 * 显示场地管理员所有正在预约中的记录
 	 * 
-	 * @param doctorId 咨询记录中对应的咨询师id
-	 * @return 咨询记录对象集合
+	 * @param doctorId 预约记录中对应的场地管理员id
+	 * @return 预约记录对象集合
 	 */
 	public List<ClientArchive> subOnList(Integer doctorId) {
 		return clientArchiveDao.listDoctorArchive(doctorId, 1, 2);
 	}
 
 	/**
-	 * 显示咨询师已经完成的咨询
+	 * 显示场地管理员已经完成的预约
 	 * 
-	 * @param doctorId 咨询记录中对应的咨询师id
-	 * @return 咨询记录对象集合
+	 * @param doctorId 预约记录中对应的场地管理员id
+	 * @return 预约记录对象集合
 	 */
 	public List<ClientArchive> getSubOk(Integer doctorId) {
 		return clientArchiveDao.listDoctorArchive(doctorId, 3, 3);
@@ -127,8 +127,8 @@ public class ClientArchiveService {
 	/**
 	 * 通过archivesId得到ClientArchive对象
 	 * 
-	 * @param archivesId 咨询记录id
-	 * @return 咨询记录对象
+	 * @param archivesId 预约记录id
+	 * @return 预约记录对象
 	 */
 	public ClientArchive getClientArchiveById(int archivesId) {
 		return clientArchiveDao.getClientArchiveById(archivesId);
@@ -136,11 +136,11 @@ public class ClientArchiveService {
 
 	/**
 	 *  驳回申请 
-	 * @param archivesId 咨询记录id
-	 * @param clientId 来访者id
+	 * @param archivesId 预约记录id
+	 * @param clientId 学生用户id
 	 * @param applyTime 申请时间
 	 * @param response 响应对象
-	 * @param doctorNow 申请的目标咨询师对象 
+	 * @param doctorNow 申请的目标场地管理员对象
 	 */
 	public void updateStatusFalseResponse(int archivesId, int clientId, String applyTime, HttpServletResponse response,
 			Doctor doctorNow) {
@@ -222,7 +222,7 @@ public class ClientArchiveService {
 	}
 
 	/**
-	 * 安排咨询，返回结果
+	 * 安排预约，返回结果
 	 * 
 	 * @param clientArchive 咨询记录
 	 * @param response 响应对象
@@ -287,8 +287,8 @@ public class ClientArchiveService {
 	/**
 	 * 完成咨询
 	 * 
-	 * @param archivesId 咨询记录id
-	 * @param clientId 来访者id
+	 * @param archivesId 预约记录id
+	 * @param clientId 学生用户id
 	 * @param response 响应对象
 	 * @param doctorNow 目标咨询师信息
 	 */
@@ -366,9 +366,9 @@ public class ClientArchiveService {
 	}
 
 	/**
-	 * 咨询记录里的咨询文档
+	 * 预约记录里的咨询文档
 	 * 
-	 * @param archivesId 咨询记录id
+	 * @param archivesId 预约记录id
 	 * @param uploadResult 文档的上传结果
 	 * @param response 响应对象
 	 */

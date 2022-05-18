@@ -6,7 +6,7 @@
 	<head>
 	<link rel="shortcut icon" href="${pageContext.request.contextPath }/favicon.ico" />
 		<meta charset="utf-8" />
-		<title>来访者端  </title>
+		<title>校团委教师端  </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="${pageContext.request.contextPath }/mutualResource/assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="${pageContext.request.contextPath }/mutualResource/assets/css/font-awesome.min.css" />
@@ -258,7 +258,7 @@ setInterval(function(){
 						class="iframeurl" title=""><i class="icon-dashboard"></i><span
 							class="menu-text">成果审核</span></a></li>
 
-					<%--<li>
+					<li>
 					<a href="#" class="dropdown-toggle"><i
 							class="icon-edit"></i><span class="menu-text" id="newMessge"> 消息 </span>
 							<span id="newMessage" style="color:red"></span>
@@ -268,11 +268,11 @@ setInterval(function(){
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listReceivMessage&reqeustUser" title="消息查看" class="iframeurl"><i
 									class="icon-double-angle-right"></i>收信箱</a></li>
-							&lt;%&ndash;<li class="home"><a href="javascript:void(0)"
+							<%--<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listSendMessage&reqeustUser" title="发送消息" class="iframeurl"><i
-									class="icon-double-angle-right"></i>发信箱</a></li>&ndash;%&gt;
+									class="icon-double-angle-right"></i>发信箱</a></li>--%>
 						</ul>
-					</li>--%>
+					</li>
 					
 						
 						

@@ -65,12 +65,12 @@ public class Message {
 	public final static String ADMIN = "admin";
 	
 	/**
-	 * 身份是咨询师
+	 * 身份是场地管理员
 	 */
 	public final static String DOCTOR = "doctor";
 	
 	/**
-	 * 身份是来访者
+	 * 身份是学生用户
 	 */
 	public final static String CLIENT = "client";
 	

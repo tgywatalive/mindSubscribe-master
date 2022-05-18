@@ -77,7 +77,7 @@
       <form action="${pageContext.request.contextPath }/doctor/DoctorServlet?m=listDoctor" method="post">
       
             <li><label class="l_f">场地管理员姓名</label><input name="name" type="text"  class="text_add" placeholder="输入场地管理员姓名" value="${search.name }" /></li>
-            
+
             <li><label class="l_f">性&nbsp;&nbsp;别&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input name="sex" type="radio"  class="ace" value="1" ${search.sex eq 1 ? "checked='checked'":"" }/><span class="lbl">男</span>
             <input name="sex" type="radio"  class="ace" value="0" ${search.sex eq 0 ? "checked='checked'":""}/><span class="lbl">女</span>

@@ -35,7 +35,7 @@ public class DoctorLoginServlet extends HttpServlet {
 
 			String doctorPwd = request.getParameter("doctorPwd");
 
-			// 向数据库查询来访者
+			// 向数据库查询学生用户
 			Doctor doctor = doctorService.getDoctor(doctorName);
 
 			if (doctor == null || !(doctor.getDoctorPwd().equals(doctorPwd))) {

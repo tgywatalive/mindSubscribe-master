@@ -14,7 +14,7 @@ import utils.Util;
 /**
  * @author h w j
  * @instruction
- * 留言板Service
+ * 报修信息Service
  */
 public class MessageBoardService {
 
@@ -24,7 +24,7 @@ public class MessageBoardService {
 	 * 查询符合条件的留言
 	 * 
 	 * @param search 查询条件
-	 * @return 留言对象集合
+	 * @return 报修信息对象集合
 	 */
 	public List<MessageBoard> listSearch(Map<String, String> search) {
 
@@ -32,7 +32,7 @@ public class MessageBoardService {
 	}
 
 	/**
-	 * 切换留言的显示和隐藏，0隐藏，1显示
+	 * 切换报修信息的显示和隐藏，0隐藏，1显示
 	 * @param messageBoardId 留言id
 	 * @param action 要更新为的值
 	 * @param response 响应对象
@@ -61,9 +61,9 @@ public class MessageBoardService {
 	}
 
 	/**
-	 * 根据留言的id查询，并且给出响应
+	 * 根据报修信息的id查询，并且给出响应
 	 * 
-	 * @param messageBoardId 留言id
+	 * @param messageBoardId 报修信息id
 	 * @param response响应对象
 	 */
 	public void getMessageBoardToResponse(int messageBoardId, HttpServletResponse response) {
@@ -91,7 +91,7 @@ public class MessageBoardService {
 
 	/**
 	 * 增加一条留言
-	 * @param messageBoard 封装好的留言对象
+	 * @param messageBoard 封装好的报修对象
 	 * @param response 响应对象
 	 */
 	public void addMessageBoard(MessageBoard messageBoard, HttpServletResponse response) {
@@ -118,8 +118,8 @@ public class MessageBoardService {
 	}
 
 	/**
-	 * 得到最新的num条留言
-	 * @param num 留言数量
+	 * 得到最新的num条报修信息
+	 * @param num 报修数量
 	 * @return 最新的num条留言对象集合
 	 */
 	public ArrayList<MessageBoard> getMessageBoardNum(int num) {

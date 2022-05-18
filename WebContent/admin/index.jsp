@@ -261,9 +261,9 @@ setInterval(function(){
 
 					<li>
 
-					<%--<li>
+					<li>
 					<a href="#" class="dropdown-toggle"><i
-							class="icon-edit"></i><span class="menu-text"> 成果回馈 </span>
+							class="icon-edit"></i><span class="menu-text"> 消息 </span>
 							<span id="newMessage" style="color:red"></span>
 							<b
 							class="arrow icon-angle-down"></b></a>
@@ -271,11 +271,11 @@ setInterval(function(){
 							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listReceivMessage&reqeustUser=admin" title="消息查看" class="iframeurl"><i
 									class="icon-double-angle-right"></i>收信箱</a></li>
-							&lt;%&ndash;<li class="home"><a href="javascript:void(0)"
+							<li class="home"><a href="javascript:void(0)"
 								name="${pageContext.request.contextPath }/message/MessageServlet?m=listSendMessage&reqeustUser=admin" title="发送消息" class="iframeurl"><i
-									class="icon-double-angle-right"></i>发信箱</a></li>&ndash;%&gt;
+									class="icon-double-angle-right"></i>发信箱</a></li>
 						</ul>
-					</li>--%>
+					</li>
 					
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="宣传管理"

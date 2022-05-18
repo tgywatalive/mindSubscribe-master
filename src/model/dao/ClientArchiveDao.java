@@ -113,9 +113,9 @@ public class ClientArchiveDao {
 	}
 
 	/**
-	 * 查询共有多少条咨询记录
+	 * 查询共有多少条预约记录
 	 * 
-	 * @return 咨询记录数
+	 * @return 预约记录数
 	 */
 	public int getClientArchiveNum() {
 
@@ -152,10 +152,10 @@ public class ClientArchiveDao {
 	}
 
 	/**
-	 * 查询来访者咨询记录
+	 * 查询学生用户预约记录
 	 * 
-	 * @param clientId 来访者id
-	 * @return 咨询记录列表
+	 * @param clientId 学生用户id
+	 * @return 预约记录列表
 	 */
 	public List<ClientArchive> listClientArchive(Integer clientId, int statusStart,int statusEnd ) {
 		
@@ -264,8 +264,8 @@ public class ClientArchiveDao {
 
 
 	/**
-	 * 查询咨询师咨询记录
-	 * @param doctorId 咨询记录中对应的咨询师id
+	 * 查询场地管理员的预约记录
+	 * @param doctorId 预约记录中对应的咨询师id
 	 * @param statusStart 最小状态
 	 * @param statusEnd 最大状态
 	 * @return
@@ -319,8 +319,8 @@ public class ClientArchiveDao {
 	/**
 	 * 通过archivesId得到ClientArchive对象
 	 * 
-	 * @param archivesId 咨询记录id
-	 * @return 咨询记录对象
+	 * @param archivesId 预约记录id
+	 * @return 预约记录对象
 	 */
 	public ClientArchive getClientArchiveById(int archivesId) {
 		
@@ -362,7 +362,7 @@ public class ClientArchiveDao {
 
 	/**
 	 * 切换status
-	 * @param archivesId 咨询记录id
+	 * @param archivesId 预约记录id
 	 * @param status 要更新到的状态
 	 * @return 受影响行数
 	 */
@@ -377,9 +377,9 @@ public class ClientArchiveDao {
 	}
 
 	/**
-	 * 安排咨询
+	 * 安排预约
 	  * 
-	 * @param clientArchive 咨询记录
+	 * @param clientArchive 预约记录
 	 * @return 受影响行数
 	 */
 	public int planSub(ClientArchive clientArchive) {
@@ -394,9 +394,9 @@ public class ClientArchiveDao {
 	}
 
 	/**
-	 * 修改咨询记录的回访内容
-	 * @param archivesId 咨询记录id
-	 * @param context 咨询者的评价内容
+	 * 修改预约记录的评价内容
+	 * @param archivesId 预约记录id
+	 * @param context 学生用户的评价内容
 	 */
 	public int evaluateSub(String archivesId, String context) {
 
@@ -410,8 +410,8 @@ public class ClientArchiveDao {
 
 	
 	/**
-	 * 更新咨询文档的存放路径
-	 * @param archivesId 咨询记录id
+	 * 更新成果文档的存放路径
+	 * @param archivesId 预约记录id
 	 * @param subDocPath 文档的路径
 	 * @return
 	 */

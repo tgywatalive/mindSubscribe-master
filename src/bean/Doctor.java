@@ -3,7 +3,7 @@ package bean;
 /**
  * @author h w j
  * @instruction
- * 咨询师表 doctor ,对应的实体类
+ * 场地管理员表 doctor ,对应的实体类
  */
 public class Doctor {
 
@@ -22,7 +22,7 @@ private Integer doctorId;
 	
 	
 	/**
-	 * 用户姓名
+	 * 场地管理员姓名
 	 */
 	private String name;
 	
@@ -52,25 +52,25 @@ private Integer doctorId;
 	private Integer isActive;
 	
 	/**
-	 * 咨询师等级
+	 * 校区
 	 */
 	private String level;
 	
 	
 	/**
-	 * 擅长方向
+	 * 适用活动
 	 */
 	private String skill;
 	
 	
 	/**
-	 * 咨询师个人照片
+	 * 所管理场地照片
 	 */
 	private String img;
 	
 	
 	/**
-	 * 一般咨询地点
+	 * 具体地址
 	 */
 	private String place;
 

@@ -10,22 +10,22 @@ import java.util.Date;
 public class MessageBoard {
 
 	/**
-	 * 留言id
+	 * 报修id
 	 */
 	private Integer boardId ;
 	
 	/**
-	 * 留言内容
+	 * 报修内容
 	 */
 	private String context ;
 	
 	/**
-	 * 留言创建者Id
+	 * 报修创建者Id
 	 */
 	private Integer createrId ;
 	
 	/**
-	 * 留言时间
+	 * 报修时间
 	 */
 	private Date createTime;
 	

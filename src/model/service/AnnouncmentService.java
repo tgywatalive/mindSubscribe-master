@@ -15,7 +15,7 @@ import utils.Util;
 /**
  * @author h w j
  * @instruction
- * 公告的Service
+ * 宣传信息的Service
  */
 public class AnnouncmentService {
 
@@ -23,10 +23,10 @@ public class AnnouncmentService {
 
 	
 	/**
-	 * 查询符合条件的公告
+	 * 查询符合条件的宣传信息
 	 * 
 	 * @param search 封装了查询条件的Map集合
-	 * @return 查询到的公告列表
+	 * @return 查询到的宣传信息列表
 	 */
 	public List<Announcement> listSearch(Map<String, String> search) {
 
@@ -35,7 +35,7 @@ public class AnnouncmentService {
 
 
 	/**
-	 * 切换公告的显示和隐藏，0隐藏，1显示
+	 * 切换宣传信息的显示和隐藏，0隐藏，1显示
 	 * @param announcmentId 要切换的公告id
 	 * @param action 要更新到的状态
 	 * @param response 响应对象
@@ -67,8 +67,8 @@ public class AnnouncmentService {
 
 
 	/**
-	 * 根据announcementId，返回一条公告，响应给客户端
-	 * @param announcementId 公告id
+	 * 根据announcementId，返回一条宣传信息，响应给客户端
+	 * @param announcementId 宣传信息id
 	 * @param response 响应对象
 	 */
 	public void getAnnouncementToResponse(int announcementId, HttpServletResponse response) {
@@ -96,8 +96,8 @@ public class AnnouncmentService {
 
 
 	/**
-	 * 增加一条公告
-	 * @param announcement 要增加的公告对象
+	 * 增加一条宣传信息
+	 * @param announcement 要增加的宣传对象
 	 * @param response 响应对象
 	 */
 	public void addAnnouncement(Announcement announcement, HttpServletResponse response) {
@@ -125,8 +125,8 @@ public class AnnouncmentService {
 
 
 	/**
-	 * 查询所有显示的公告（最新num条）
-	 * @param num 查询的公告数量
+	 * 查询所有显示的宣传信息（最新num条）
+	 * @param num 查询的宣传信息数量
 	 * @return 最新的num条公告的列表
 	 */
 	public ArrayList<Announcement> getAnnouncmentNum(int num) {

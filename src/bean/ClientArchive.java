@@ -10,33 +10,33 @@ import java.util.Date;
 public class ClientArchive {
 
 	/**
-	 * 咨询记录Id
+	 * 预约记录Id
 	 */
 	private Integer archivesId;
 	
 	/**
-	 * 本次咨询的，来访者的id
+	 * 本次预约的，来访者的id
 	 */
 	private Integer clientId;
 	
 	/**
-	 * 本次咨询的，咨询师的id
+	 * 本次预约的，场地管理员的id
 	 */
 	private Integer doctorId;
 	
 	/**
-	 * 申请人(client)做的问卷 内容
+	 * 预约人(client)做的问卷 内容
 	 */
 	private String questionContext = "";
 	
 	
 	/**
-	 * 申请人主观描述
+	 * 预约人设备申请
 	 */
 	private String clientDescription;
 	
 	/**
-	 * 评测结果,等级分数
+	 * 身份结果,选择分数
 	 * 
 	 */
 	private Integer level;
@@ -47,57 +47,57 @@ public class ClientArchive {
 	private Date applyTime;
 	
 	/**
-	 * 申请人期望的咨询地点，最终只是一个参考
+	 * 申请人期望的地点，最终只是一个参考
 	 */
 	private String expectPlace = "";
 	
 	/**
-	 * 申请人期望的咨询时间，最终只是一个参考
+	 * 申请人期望的时间，最终只是一个参考
 	 */
 	private String expectTime = "";
 	
 	/**
-	 * 咨询开始时间，几月几日几时
+	 * 预约开始时间，几月几日几时
 	 */
 	private Date startDatetime;
 	
 	/**
-	 * 咨询结束时间，几月几日几时
+	 * 预约结束时间，几月几日几时
 	 */
 	private Date endDatetime;
 	
 	/**
-	 * 咨询地点
+	 * 预约地点
 	 */
 	private String subPlace = "未定";
 	
 	/**
-	 * -1 失败，0 申请中，1 通过申请但未完成，2完成咨询但未完善资料, 3全部完成
+	 * -1 失败，0 申请中，1 通过申请但未完成，2完成预约但未上传成果文档, 3全部完成
 	 */
 	private Integer status = 0;
 	
 	/**
-	 * 一次咨询的记录文档
+	 * 一次预约的记录文档
 	 */
 	private String docPath = "";
 	
 	/**
-	 * 咨询师
+	 * 场地管理员
 	 */
 	private Doctor doctor;
 	
 	/**
-	 * 来访者
+	 * 学生用户
 	 */
 	private Client client;
 	
 	/**
-	 * 回访记录内容
+	 * 教师成果评价内容
 	 */
 	private String secondQuestionContext = "";
 	
 	/**
-	 * 是否回访，0否，1是
+	 * 是否评价，0否，1是
 	 */
 	private Integer isSecondDo = 0;
 

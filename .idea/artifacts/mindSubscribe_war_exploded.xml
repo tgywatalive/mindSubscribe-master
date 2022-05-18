@@ -22,6 +22,7 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="mindSubscribe/web/Web" />
+      <element id="dir-copy" path="$PROJECT_DIR$/WebContent" />
     </root>
   </artifact>
 </component>

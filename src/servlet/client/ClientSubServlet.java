@@ -28,7 +28,7 @@ import static servlet.client.ClientLoginServlet.LOGIN_CLIENT;
 /**
  * @author h w j
  * @instruction
- * 来访者端，预约业务流程控制器
+ * 学生用户端，预约业务流程控制器
  */
 public class ClientSubServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

@@ -13,18 +13,18 @@ import org.apache.struts2.json.annotations.JSON;
 public class Announcement {
 
 	/**
-	 * 一条的公告主键
+	 * 一条的宣传信息主键
 	 */
 	private Integer announcementId;
 	
 	
 	/**
-	 * 公告标题
+	 * 宣传标题
 	 */
 	private String title;
 	
 	/**
-	 * 公告内容
+	 * 宣传内容
 	 */
 	private String context;
 	
@@ -47,7 +47,7 @@ public class Announcement {
 	
 	
 	/**
-	 * 创建公告的管理员
+	 * 创建宣传的管理员
 	 */
 	private Admin admin;
 	

@@ -8,7 +8,7 @@ package bean;
 public class Question {
 
 	/**
-	 * 一个问卷题目的id
+	 * 一个身份题目的id
 	 */
 	private Integer questionId;
 	

@@ -76,7 +76,7 @@
 	<div class="page-content clearfix">
 		<div id="Member_Ratings">
 			<div class="d_Confirm_Order_style">
-				<div class="search_style">
+				<%--<div class="search_style">
 					<div class="title_names">搜索公告</div>
 					<ul class="search_content clearfix">
 						<form
@@ -110,11 +110,11 @@
 						</form>
 
 					</ul>
-				</div>
+				</div>--%>
 				<!---->
 				<div class="border clearfix">
 					<span class="l_f"> <a href="javascript:void()"
-						id="member_add" class="btn btn-warning"><i class="icon-plus"></i>添加公告</a>
+						id="member_add" class="btn btn-warning"><i class="icon-plus"></i>添加宣传信息</a>
 					</span> <span class="r_f">共：<b>${listSize }</b>条
 					</span>
 				</div>

@@ -31,7 +31,7 @@ public class AnnouncmentDao {
 	 * 查询符合条件的公告
 	 * 
 	 * @param search 封装了查询条件的Map集合
-	 * @return 查询到的公告列表
+	 * @return 查询到的宣传信息列表
 	 */
 	public List<Announcement> listSearch(Map<String, String> search) {
 
@@ -134,7 +134,7 @@ public class AnnouncmentDao {
 	}
 
 	/**
-	 * 切换公告的显示和隐藏，0隐藏，1显示
+	 * 切换宣传内容的显示和隐藏，0隐藏，1显示
 	 * @param announcementId 要切换的公告id
 	 * @param action 要更新到的状态
 	 * @return 受影响行数
@@ -148,8 +148,8 @@ public class AnnouncmentDao {
 	}
 
 	/**
-	 * 增加一条公告
-	 * @param announcement 封装的公告对象
+	 * 增加一条宣传信息
+	 * @param announcement 封装的宣传对象
 	 * @return 受影响行数
 	 */
 	public int addAnnouncement(Announcement announcement) {
@@ -166,9 +166,9 @@ public class AnnouncmentDao {
 	}
 
 	/**
-	 * 根据announcementId，查询一条公告
-	 * @param announcementId 公告id
-	 * @return 查询到的公告对象
+	 * 根据announcementId，查询一条宣传信息
+	 * @param announcementId 宣传id
+	 * @return 查询到的宣传对象
 	 */
 	public Announcement getAnnouncement(int announcementId) {
 
@@ -223,8 +223,8 @@ public class AnnouncmentDao {
 	
 	/**
 	 * 查询所有显示的公告（最新num条）
-	 * @param num 查询的公告数量
-	 * @return 最新的num条公告的列表
+	 * @param num 查询数量
+	 * @return 最新的num条宣传的列表
 	 */
 	public ArrayList<Announcement> getAnnouncmentNum(int num) {
 

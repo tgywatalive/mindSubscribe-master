@@ -20,7 +20,7 @@ import servlet.client.ClientLoginServlet;
 /**
  * @author h w j
  * @instruction
- * 咨询师端，首页，修改基本信息(包括密码)控制器
+ * 场地管理员端，首页，修改基本信息(包括密码)控制器
  */
 public class DoctorBaseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -105,12 +105,12 @@ public class DoctorBaseServlet extends HttpServlet {
 
 			request.setAttribute("messageList", messageList);
 
-			// 查询所有显示的公告(最新的十条)
+			// 查询所有显示的宣传信息(最新的十条)
 			ArrayList<Announcement> announcmentList = announcmentService.getAnnouncmentNum(10);
 
 			request.setAttribute("announcmentList", announcmentList);
 
-			// 转发到首页(来访者和咨询师共用一个首页) 这里已改
+			// 转发到首页(学生用户和场地管理员共用一个首页) 这里已改
 			request.getRequestDispatcher("/doctor/home.jsp").forward(request, response);
 
 		} else if ("doctorInfo".equals(m)) {

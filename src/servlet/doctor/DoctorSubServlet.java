@@ -29,7 +29,7 @@ import model.service.ClientService;
 /**
  * @author h w j
  * @instruction
- * 咨询师端，预约咨询的业务流程 控制器
+ * 场地管理员端，预约的业务流程 控制器
  */
 @MultipartConfig
 public class DoctorSubServlet extends HttpServlet {
@@ -57,9 +57,9 @@ public class DoctorSubServlet extends HttpServlet {
 		Doctor doctorNow = (Doctor) request.getSession().getAttribute(DoctorLoginServlet.LOGIN_DOCTOR);
 
 		if ("subClientList".equals(m)) {
-			// 咨询申请
+			// 申请
 
-			// 查询所有咨询申请
+			// 查询所有申请
 			List<ClientArchive> list = clientArchiveService.getAllSubFromClient(doctorNow.getDoctorId());
 
 			request.setAttribute("clientArchiveList", list);
@@ -67,9 +67,9 @@ public class DoctorSubServlet extends HttpServlet {
 			request.getRequestDispatcher("/doctor/subClientList.jsp").forward(request, response);
 
 		} else if ("subOnList".equals(m)) {
-			// 咨询中的
+			// 使用中的
 
-			// 显示正在咨询中的
+			// 显示正在使用中的
 
 			List<ClientArchive> list = clientArchiveService.subOnList(doctorNow.getDoctorId());
 
@@ -78,9 +78,9 @@ public class DoctorSubServlet extends HttpServlet {
 			request.getRequestDispatcher("/doctor/subOnList.jsp").forward(request, response);
 
 		} else if ("doctorConsult".equals(m)) {
-			// 咨询记录
+			// 预约记录
 
-			// 已经完成的咨询记录
+			// 已经完成的预约记录
 
 			List<ClientArchive> list = clientArchiveService.getSubOk(doctorNow.getDoctorId());
 			//List<ClientArchive> list = clientArchiveService.getSubOk();
@@ -123,7 +123,7 @@ public class DoctorSubServlet extends HttpServlet {
 					applyTime, response, doctorNow);
 
 		} else if ("planSub".equals(m)) {
-			// 安排咨询，即设置咨询时间地点，status改为 1 通过申请但未完成
+			// 安排预约，即设置咨询时间地点，status改为 1 通过申请但未完成
 
 			// 取得参数
 

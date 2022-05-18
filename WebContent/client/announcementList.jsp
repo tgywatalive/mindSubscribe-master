@@ -75,7 +75,7 @@
 	<div class="page-content clearfix">
 		<div id="Member_Ratings">
 			<div class="d_Confirm_Order_style">
-				<div class="search_style">
+				<%--<div class="search_style">
 					<div class="title_names">搜索公告</div>
 					<ul class="search_content clearfix">
 						<form
@@ -109,7 +109,7 @@
 						</form>
 
 					</ul>
-				</div>
+				</div>--%>
 				
 				<div class="table_menu_list">
 					<table class="table table-striped table-bordered table-hover"

@@ -284,7 +284,7 @@ setInterval(function(){
 						
 						<li><a href="javascript:void(0)" name="${pageContext.request.contextPath }/announcment/AnnouncmentServlet?m=listAnnouncment"  title="公告" 
 						class="iframeurl"><i class="icon-edit"></i><span
-							class="menu-text"> 公告 </span></a></li>
+							class="menu-text"> 宣传信息 </span></a></li>
 						
 						
 

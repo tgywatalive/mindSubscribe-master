@@ -94,13 +94,13 @@
           </ul>
          </div> --%>
           <div class="news_style">
-          <div class="title_name">最新公告</div>
+          <div class="title_name">宣传信息</div>
           <ul class="list">
           
           	<c:forEach items="${announcmentList }" var="announcment">
           	
           		<li><i class="icon-bell red"></i>
-          		<a title="公告管理" href="${pageContext.request.contextPath }/admin/AnnouncmentServlet?m=listAnnouncment">
+          		<a title="公告管理" <%--href="${pageContext.request.contextPath }/admin/AnnouncmentServlet?m=listAnnouncment"--%>>
           			<b>${announcment.title}:</b>&nbsp;
           			${announcment.context}&nbsp;---${announcment.admin.name}&nbsp;
           	 		<fmt:formatDate value="${message.sendTime}" pattern="yyyy-MM-dd HH:mm:ss" />

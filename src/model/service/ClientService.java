@@ -13,7 +13,7 @@ import utils.Util;
 /**
  * @author h w j
  * @instruction
- * 来访者的Service
+ * 学生用户者的Service
  */
 public class ClientService {
 	
@@ -23,7 +23,7 @@ public class ClientService {
 	/**
 	 * 查询符合条件的用户
 	 * @param search 查询条件
-	 * @return 来访者对象集合
+	 * @return 学生用户对象集合
 	 */
 	public List<Client> listSearch(Map<String, String> search) {
 
@@ -34,7 +34,7 @@ public class ClientService {
 	/**
 	 * 修改client表中is_active的值，是否为激活状态
 	 * 
-	 * @param clientId 来访者id
+	 * @param clientId 学生用户id
 	 * @param action 要设置的状态值
 	 */
 	public void toggleClientActive(Integer clientId, Integer action, HttpServletResponse response) {
@@ -63,8 +63,8 @@ public class ClientService {
 
 
 	/**
-	 * 查询 共有多少来访者
-	 * @return 来访者数量
+	 * 查询 共有多少学生用户
+	 * @return 学生用户数量
 	 */
 	public int getClientNum() {
 		return clientDao.getClientNum();
@@ -72,9 +72,9 @@ public class ClientService {
 
 
 	/**
-	 * 根据账号查询 来访者（支持电话）
+	 * 根据账号查询 学生用户（支持电话）
 	 * @param clientName 账号
-	 * @return 来访者对象
+	 * @return 学生用户对象
 	 */
 	public Client getClient(String clientName) {
 		

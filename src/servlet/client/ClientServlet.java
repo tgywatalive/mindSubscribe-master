@@ -17,7 +17,7 @@ import model.service.ClientService;
 /**
  * @author h w j
  * @instruction
- * 管理员端，管理来访者控制器
+ * 管理员端，管理学生用户控制器
  */
 public class ClientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

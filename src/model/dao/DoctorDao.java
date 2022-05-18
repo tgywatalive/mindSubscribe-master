@@ -24,7 +24,7 @@ public class DoctorDao {
 	/**
 	 * 修改doctor表中is_active的值，是否为激活状态
 	 * 
-	 * @param doctorId 咨询师id
+	 * @param doctorId 场地管理员id
 	 * @param action 要更新的值
 	 * @return 受影响行数
 	 */
@@ -37,10 +37,10 @@ public class DoctorDao {
 	}
 
 	/**
-	 * 查询符合条件的咨询师
+	 * 查询符合条件的场地管理员
 	 * 
 	 * @param search 查询条件
-	 * @return 咨询师对象集合
+	 * @return 场地管理员对象集合
 	 */
 	public List<Doctor> listSearch(Map<String, String> search) {
 
@@ -134,7 +134,7 @@ public class DoctorDao {
 
 	/**
 	 * 根据doctorId 删除 doctor
-	 * @param doctorId 咨询师id
+	 * @param doctorId 场地管理员id
 	 * @return 受影响行数
 	 */
 	public int deleteDoctor(Integer doctorId) {
@@ -147,7 +147,7 @@ public class DoctorDao {
 	
 	/**
 	 * 通过doctor的doctorId 查询doctor
-	 * @param doctorId 咨询师id
+	 * @param doctorId 场地管理员id
 	 * @return 咨询师对象
 	 */
 	public Doctor getDoctorByDoctorId(int doctorId) {
@@ -200,7 +200,7 @@ public class DoctorDao {
 
 	/**
 	 * 修改Doctor
-	 * @param doctor 要更新的咨询师对象
+	 * @param doctor 要更新的场地管理员对象
 	 * @return 受影响行数
 	 */
 	public int updateDoctor(Doctor doctor) {
@@ -218,7 +218,7 @@ public class DoctorDao {
 
 	/**
 	 * 增加一个Doctor
-	 * @param doctor 要添加的咨询师对象
+	 * @param doctor 要添加的场地管理员对象
 	 * @return 受影响行数
 	 */
 	public int addDoctor(Doctor doctor) {
@@ -236,8 +236,8 @@ public class DoctorDao {
 
 	
 	/**
-	 * 查询咨询师总数
-	 * @return 咨询师数量
+	 * 查询场地管理员总数
+	 * @return 场地管理员数量
 	 */
 	public int getDoctorNum() {
 		
@@ -275,9 +275,9 @@ public class DoctorDao {
 
 	
 	/**
-	 * 通过doctorName获得咨询师(支持电话登录)
-	 * @param doctorName 咨询师账号
-	 * @return 咨询师对象
+	 * 通过doctorName获得场地管理员(支持电话登录)
+	 * @param doctorName 场地管理员账号
+	 * @return 场地管理员对象
 	 */
 	public Doctor getDoctor(String doctorName) {
 
@@ -329,8 +329,8 @@ public class DoctorDao {
 
 	
 	/**
-	 * 修改咨询师密码
-	 * @param doctorId 咨询师id
+	 * 修改场地管理员密码
+	 * @param doctorId 场地管理员id
 	 * @param newPwd 新密码
 	 * @return 受影响行数
 	 */

@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * @author h w j
  * @instruction 
- * 来访者client表，对应的实体类
+ * 学生用户client表，对应的实体类
  *
  */
 public class Client {

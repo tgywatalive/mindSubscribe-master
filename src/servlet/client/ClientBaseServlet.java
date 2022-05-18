@@ -23,7 +23,7 @@ import servlet.admin.AdminLoginServlet;
 /**
  * @author h w j
  * @instruction
- * 来访者端，首页，修改基本信息(包括密码)控制器
+ * 学生用户端，首页，修改基本信息(包括密码)控制器
  */
 public class ClientBaseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

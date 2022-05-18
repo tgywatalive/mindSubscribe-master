@@ -221,8 +221,8 @@ public class MessageBoardDao {
 	}
 
 	/**
-	 * 得到最新的num条留言
-	 * @param num 留言数量
+	 * 得到最新的num条宣传信息
+	 * @param num 宣传信息数量
 	 * @return 最新的num条留言对象集合
 	 */
 	public ArrayList<MessageBoard> getMessageBoardNum(int num) {

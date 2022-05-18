@@ -23,7 +23,7 @@
 		<![endif]-->
 		<script src="${pageContext.request.contextPath }/mutualResource/js/jquery-1.9.1.min.js"></script>        
         <script src="${pageContext.request.contextPath }/mutualResource/assets/layer/layer.js" type="text/javascript"></script>
-<title>咨询师登陆</title>
+<title>场地管理员登陆</title>
 </head>
 
 <body class="login-layout" style="background-image: url(${pageContext.request.contextPath }/mutualResource/myImg/chuan2.png);background-size:cover;background-color: #eff5f8;">
