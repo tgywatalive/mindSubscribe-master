@@ -68,7 +68,7 @@ public class AnnouncmentServlet extends HttpServlet {
 			search.put("startTime", startTime);
 			search.put("endTime", endTime);
 
-			// 查询符合条件的公告
+			// 查询符合条件的宣传信息
 			List<Announcement> list = announcementService.listSearch(search);
 
 			request.setAttribute("search", search);
@@ -82,7 +82,7 @@ public class AnnouncmentServlet extends HttpServlet {
 				
 				request.getRequestDispatcher("/admin/announcementList.jsp").forward(request, response);
 			
-			}else {//普通来访者和咨询师
+			}else {//其他用户
 				
 				request.getRequestDispatcher("/client/announcementList.jsp").forward(request, response);
 				
@@ -102,7 +102,7 @@ public class AnnouncmentServlet extends HttpServlet {
 
 		} else if ("selecteAnnouncement".equals(m)) {// ajax
 
-			// 查看公告
+			// 查看宣传信息
 
 			String announcementId = request.getParameter("id");
 
@@ -132,7 +132,7 @@ public class AnnouncmentServlet extends HttpServlet {
 			announcement.setIsActive(Integer.parseInt(isActive));
 			announcement.setCreaterId(admin.getAdminId());
 			
-			//增加一个公告
+			//增加一条宣传信息
 			announcementService.addAnnouncement(announcement,response);
 			
 		}

@@ -224,7 +224,7 @@ jQuery(function($) {
 
 
 
-/*留言隐藏*/
+/*隐藏*/
 function member_stop(obj,id){
 	layer.confirm('确认要隐藏吗？',function(index){
 		
@@ -249,7 +249,7 @@ function member_stop(obj,id){
 	});
 }
 
-/*公告显示*/
+/*显示*/
 function member_start(obj,id){
 	layer.confirm('确认要显示吗？',function(index){
 		

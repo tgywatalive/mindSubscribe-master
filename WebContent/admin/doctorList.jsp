@@ -170,7 +170,7 @@
           	<a style="text-decoration:none"
 								onClick="sendMessage(this,'${doctor.doctorId }','${doctor.name }','doctor')"
 											href="javascript:;" title="发送消息"
-											class="btn btn-xs btn-success">提醒上交成果</a>
+											class="btn btn-xs btn-success">私信</a>
           	
           	</td>
           	
@@ -187,7 +187,7 @@
           	
           	<a style="text-decoration:none" onClick="sendMessage(this,'${doctor.doctorId }','${doctor.name }','doctor')"
 											href="javascript:;" title="发送消息"
-											class="btn btn-xs btn-success">提醒上交成果</a>
+											class="btn btn-xs btn-success">私信</a>
           	
           	</td>
           </c:if>

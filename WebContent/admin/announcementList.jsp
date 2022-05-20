@@ -596,7 +596,7 @@ function selectedDoctor(id){
 	 }
 	 
 	 
-		//验证公告状态（不为空即可）
+		//验证宣传信息状态（不为空即可）
 		if($(thisElement).is("input[name='isActive']")){
 			
 			var msg = "";

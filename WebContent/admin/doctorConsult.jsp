@@ -112,7 +112,7 @@
           
           <td>
           <c:if test="${empty clientArchive.secondQuestionContext}">
-          	该咨询者还未做出评价！
+          	老师还未做出评价！
           </c:if>
           ${clientArchive.secondQuestionContext}
           </td>
